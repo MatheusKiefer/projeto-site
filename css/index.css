@@ -1,0 +1,71 @@
+.cabecalho{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+}
+
+.imagem-logo{
+    width: 100%;
+    max-width: 200px;
+    min-width: 100px;
+    height: auto;
+}
+
+.menu{
+    justify-self: center;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a{
+    width: 100%;
+    max-width: 200px;
+    min-width: 100px;
+    color: #1c3557;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+.menu a:hover{
+    color: #008bd2;
+}
+
+.menu a.ativo{
+    color: #008bd2;
+    border-bottom: 3px solid #008bd2;
+}
+
+.botao-orcamento{
+    width: 100%;
+    max-width: 200px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background-color: #0077b6;
+    color: white;
+    text-decoration:none;
+    padding: 1px 35px;
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.botao-orcamento:hover{
+    background-color: #005f91;
+}
+
+.botao-orcamento span{
+    font-size: 30px;
+}
