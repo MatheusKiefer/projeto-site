@@ -16,6 +16,14 @@ body{
     background-color: white;
 }
 
+.cabecalho button{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 60px;
+    color: #0077b6;
+    cursor: pointer;
+}
 
 .imagem-logo{
     width: 100%;
@@ -68,7 +76,6 @@ body{
 .botao-orcamento{
     width: 100%;
     max-width: 200px;
-    min-width: 100px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -79,6 +86,7 @@ body{
     border-radius: 25px;
     font-family: Arial, sans-serif;
     font-size: 15px;
+    flex-wrap: nowrap;
 }
 
 .botao-orcamento:hover{
@@ -87,4 +95,22 @@ body{
 
 .botao-orcamento span{
     font-size: 30px;
+}
+
+@media (max-width: 720px)
+{
+    .cabecalho{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        background-color: #005f9120;
+    }
+    .cabecalho ul{
+        display:none;
+    }
+    .botao-orcamento{
+        display: none;
+    }
+    .cabecalho button{
+        display: block;
+    }
 }
