@@ -243,15 +243,18 @@ body{
         display: flex;
         align-items: center;
 
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         max-width: 90%;
         min-width: 0;
-        font-size: 18px;
+        font-size: 20px;
         background-color: #005f9120;
         margin-top: 15px;
-        padding: 10px 10px;
-        gap: 5px;
+        padding: 10px 20px 10px;
+        gap: 15px;
+    }
+    .menu .botao-orcamento span{
+        display: none;
     }
   
 }
