@@ -10,16 +10,17 @@
     <script type="text/javascript" defer src="js/script.js"></script>
 </head>
 <body>
+
     <header class="cabecalho">
         <a href="index.html">
             <img id="logo_cab" class="imagem-logo"
                  src="img/logo_topo_site.png"
                  alt="Logomarca Alfa & Omega Pinturas"></a>
 
-        <button id="btn_menu" class="botao_mobile">
+        <button id="btn_menu" class="botao_mobile" type="button" aria-label="Abrir_menu">
             <span id="icone_menu">☰</span>
         </button>
-        <nav class="menu">
+        <nav class="menu" aria-label="Menu Principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a class="ativo" href="servicos.html">Serviços</a></li>
@@ -31,20 +32,329 @@
             <span>➠</span>
         </a>
     </header>
+
     <main>
-        <section>
-            <h2>
-                Bem-vindo(a)
-            </h2>
-            <p>
-                Esse é o meu primeiro site em html.
+        <section id="apresentacao">
+            <h1 id="titulo-servicos"> Serviços</h1>
+
+            <h2>Soluções completas em pinturas para ambientes
+                residenciais e comerciais.</h2>
+
+            <p>Da preparação ao acabamento final, a Alfa & Ômega Pinturas
+                oferece serviços com qualidade, organização e compremetimento
+                em cada detalhe do seu projeto.
             </p>
+
+            <a href="orcamento.html" class="botao-orcamento">
+                Solicitar Orçamento
+            </a>
+
+            <a href="#contato" class="botao-secundario">
+                Fale com a nossa equipe
+            </a>
+
+            <figure>
+                <img src="#">
+            </figure>
+           
+        </section>
+
+        <aside id="aviso-prazos">
+
+            <h3>Sobre os prazos dos serviços</h3>
+
+            <p>
+                Os prazos dos serviços deve ser verificado com o profissional,
+                que podem variar de acordo com o tamanho da área, condições da
+                superfície, a necessidade de preparação e as características de cada
+                projeto.Após a avaliação, fornecemos um prazo preciso e personalizado.
+            </p>
+
+        </aside>
+
+        <section id="carrosel-servicos" aria-labelledby="titulo-carrosel">
+            <header>
+                <p>Nossos serviços</p>
+
+                <h2 id="titulo-carrosel">
+                    Conheça em detalhes nossos serviços de pintura.
+                </h2>
+
+                <p>Clique na imagem para ver a descrição completa
+                    de cada serviço.
+                </p>
+            </header>
+
+            <button type="button" id="carrosel-anterior" aria-label="Serviço anterior"
+            >&#10094;</button>
+
+            <ul id="carrosel">
+                <li>
+                    <article id="servicos-residencial">
+                        <details name="servico">
+                            <summary>
+                                <figure>
+                                    <img src="#">
+                                    <figcaption>Pintura Residencial</figcaption>
+                                </figure>
+                            </summary>
+                            <p>Transforme sua casa com cores que valorizam seus ambientes
+                                e proporcionam mais bem-estar, conforto e personalidade.
+                            </p>
+
+                            <h3>Como realizamos</h3>
+                            <ul>
+                                <li>Proteção completa dos móveis e pisos.</li>
+                                <li>Preparação das superfícies.</li>
+                                <li>Aplicação com tintas de alta qualidade.</li>
+                                <li>Acabamento limpo e detalhado.</li>
+                            </ul>
+
+                            <a class="botao-orcamento" href="orcamento.html">Solicitar Orçamento</a>
+                        </details>
+                    </article>
+                </li>
+
+                <li>
+                    <article id="servico-comercial" aria-labelledby="nome-comercial">
+                        <details name="servico">
+                            <sumary>
+                                <figure>
+                                    <img src="#">
+                                    <figcaption id="nome-comercial">Pintura comercial</figcaption>
+                                </figure>
+                            </sumary>
+                            <p>
+                                Ambientes profissionais mais modernos, com excelente
+                                apresentação para seus clientes e colaboradores.
+                            </p>
+
+                            <h3>Como realizamos</h3>
+                            <ul>
+                                <li>Planejamento técnico para minimizar interrupções.</li>
+                                <li>Preparação técnica das superfícies.</li>
+                                <li>Aplicação de tintas específicas.</li>
+                                <li>Acabamento profissional e uniforme.</li>
+                            </ul>
+                            <a class="botao-orcamento" href="orcamento.html">Solicitar Orçamento</a>
+                        </details>
+                    </article>
+                </li>
+
+                <li>
+                    <article id="servico-externa" aria-labelledby="nome-externa">
+                        <details name="servico">
+                            <summary>
+                                <figure>
+                                    <img src="#">
+                                    <figcaption id="nome-externa">Pintura externa</figcaption>
+                                </figure>
+                            </summary>
+
+                            <p>
+                                Proteção e beleza para fachadas, muros e áreas externas, com tintas
+                                resistentes as condições climaticas e alto poder de durabilidade.
+                            </p>
+
+                            <h3>Como realizamos</h3>
+                            <ul>
+                                <li>Lavagem e tratamento da superfície.</li>
+                                <li>Correção de trincas e imperfeições.</li>
+                                <li>Aplicação de tintas impermeáveis.</li>
+                                <li>Acabamento resistentes e duradouro.</li>
+                            </ul>
+                            <a class="botao-orcamento" href="orcamento.html">Solicitar Orçamento</a>
+                        </details>
+                    </article>
+                </li>
+
+                <li>
+                    <article id="servico-acabamentos" aria-labelledby="nome-acabamentos">
+                        <details name="servico">
+                            <summary>
+                                <figure>
+                                    <img src="#">
+                                    <figcaption id="nome-acabamentos">Acabamentos</figcaption>
+                                </figure>
+                            </summary>
+                            <p>
+                                Detalhes que fazem a diferença no resultado final, com 
+                                acabamentos de alta qualidade e precisão.
+                            </p>
+
+                            <h3>Como realizamos</h3>
+                            <ul>
+                                <li>Aplicação de massas e nivelamento.</li>
+                                <li>Pintura de rodapés, sancas e molduras.</li>
+                                <li>Acabamentos fosco, acetinado ou brilhante.</li>
+                                <li>Revisão minuciosa de detalhes.</li>
+                            </ul>
+
+                            <a class="botao-orcamento" href="orcamento.html">Solicitar Orçamento</a>
+                        </details>
+                    </article>
+                </li>
+
+                <li>
+                    <article id="servico-preparacao" aria-labelledby="nome-preparacao">
+                        <details name="servico">
+                            <summary>
+                                <figure>
+                                    <img src="#">
+                                    <figcaption id="nome-preparacao">Preparação de superfícies</figcaption>
+                                </figure>
+                            </summary>
+
+                            <p>
+                                A base perfeita para um resultado duradouro e de alta qualidade,com 
+                                Correção de imperfeições e tratamento adequado.
+                            </p>
+
+                            <h3>Como realizamos</h3>
+                            
+                            <ul>
+                                <li>Avaliação das condições da superfície.</li>
+                                <li>Correção de trincas e fissuras.</li>
+                                <li>Aplicação de seladores e massas.</li>
+                                <li>Lixamento e nivelamento.</li>
+                            </ul>
+
+                            <a class="botao-orcamento" href="orcamento.html">Solicitar Orçamento</a>
+                        </details>
+                    </article>
+                </li>
+
+                <li>
+                    <article id="servico-texturas" aria-labelledby="nome-texturas">
+                        <details name="servico">
+                            <summary>
+                                <figure>
+                                    <img src="#">
+                                    <figcaption id="nome-texturas">Texturas e efeitos</figcaption>
+                                </figure>
+                            </summary>
+
+                            <p>
+                                Soluções modernas para dar mais estilo e personalidade aos seus
+                                ambientes, com diversas opções de texturas e efeitos decorativos.
+                            </p>
+ 
+                            <h3>Como realizamos</h3>
+                            <ul>
+                                <li>Escolha do tipo de textura ou efeito.</li>
+                                <li>Preparação da superfície.</li>
+                                <li>Aplicação técnica especializada.</li>
+                                <li>Acabamento e proteção.</li>
+                            </ul>
+
+                            <a class="botao-orcamento" href="orcamento.html">Solicitar Orçamento</a>
+                        </details>
+                    </article>
+                </li>
+
+                <li>
+                    <article id="servico-reointura" aria-labelledby="nome-repintura">
+                        <details name="servico">
+                            <summary>
+                                <figure>
+                                    <img src="#">
+                                    <figcaption id="nome-repintura">Repintura/Renovação de ambientes</figcaption>
+                                </figure>
+                            </summary>
+
+                            <p>
+                                Renove seus espaços com praticidade e economia, dando uma nova
+                                vida aos ambientes com cores modernas e acabamento impecável.
+                            </p>
+ 
+                            <h3>Como realizamos</h3>
+                            <ul>
+                                <li>Avaliação do estado da pintura atual.</li>
+                                <li>Preparação e pequenos reparos.</li>
+                                <li>Aplicação das novas cores.</li>
+                                <li>Limpeza completa após a finalização.</li>
+                            </ul>
+
+                            <a class="botao-orcamento" href="orcamento.html"> Solicitar Orçamento</a>
+                        </details>
+                    </article>
+                </li>
+
+            </ul>
+
+            <button type="button" id="carrosel-proximo" aria-label="Próximo serviço">&#10095</button>
+        </section>
+
+        <section id="diferenciais" aria-labelledby="titulo-diferenciais">
+            <h2 id="titulo-diferenciais">Mais que pintura, a tranquilidade de um serviço bem feito.</h2>
+
+            <ul>
+                <li>
+                    <h3>Qualidade</h3>
+                    <p>Acabamento impecável</p>
+                </li>
+                <li>
+                    <h3>Equipe especializada</h3>
+                    <p>Profissionais experientes e capacitados</p>
+                </li>
+                <li>
+                    <h3>Organização</h3>
+                    <p>Ambiente limpo e protegido</p>
+                </li>
+                <li>
+                    <h3>Pontualidade</h3>
+                    <p>Respeito ao seu tempo</p>
+                </li>
+                <li>
+                    <h3>Compromisso</h3>
+                    <p>Com a sua satisfação do início ao fim</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="chamada-final" aria-labelledby="titulo-chamada">
+            <h2 id="titulo-chamada">Não sabe exatamente qual serviço você precisa?</h2>
+ 
+            <p>
+                Nossa equipe está pronta para avaliar o seu ambiente e indicar a melhor
+                solução, com um orçamento personalizado, sem compromisso.
+            </p>
+ 
+            <a href="orcamento.html" class="botao-orcamento">
+                Solicitar uma avaliação
+            </a>
+ 
+            <figure>
+                <img src="#">
+                <figcaption>Estamos prontos para ajudar!</figcaption>
+            </figure>
         </section>
     </main>
-    <footer>
-        <p>
-            @2026 meu site
-        </p>
+
+    <footer id="contato">
+
+        <h2>Contato</h2>
+ 
+        <address>
+            <ul>
+                <li>
+                    Bianno Ciriaco:
+                    <a href="https://wa.me/5548991846270">(48) 99184-6270</a>
+                </li>
+                <li>
+                    Luiz Fernando de Souza:
+                    <a href="https://wa.me/5548991153498">(48) 99115-3498</a>
+                </li>
+                <li>
+                    Instagram:
+                    <a href="https://www.instagram.com/alfaeomegapinturass"
+                       target="_blank" rel="noopener">@alfaeomegapinturas</a>
+                </li>
+            </ul>
+        </address>
+ 
+        <p><small>&copy; 2026 Alfa &amp; Ômega Pinturas. Todos os direitos reservados.</small></p>
+        
     </footer>
 </body>
 </html>
