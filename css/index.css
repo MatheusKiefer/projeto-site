@@ -185,24 +185,7 @@ body{
         box-sizing: border-box;
         color: #fcfafa;
     }
-
-    .menu li a:hover{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        max-width: 90%;
-        min-width: 0;
-        font-size: 18px;
-        background-color: #0077b6;
-        border-radius: 25px;
-        border-bottom: none;
-
-        margin-top: 15px;
-        padding: 10px 10px;
-        gap: 5px;
-        color: white;
-    }
+    
     .menu li a.ativo{
         display: flex;
         align-items: center;
@@ -211,7 +194,7 @@ body{
         max-width: 90%;
         min-width: 0;
         font-size: 18px;
-        background-color: #0077b6;
+        background-color: #013551;
         border-radius: 25px;
         
 
@@ -222,37 +205,31 @@ body{
         
     }
     .menu .botao-orcamento:hover{
-        display: flex;
-        align-items: center;
-        justify-content:;
-        width: 100%;
-        max-width: 90%;
-        min-width: 0;
-        font-size: 18px;
         background-color: #0077b6;
-        border-radius: 25px;
-        white-space: nowrap;
-
-        margin-top: 15px;
-        padding: 10px 10px;
-        gap:2px;
-        color: white;
     }
 
     .menu .botao-orcamento{
         display: flex;
         align-items: center;
-
+        white-space: nowrap;
         justify-content: flex-start;
+
         width: 100%;
         max-width: 90%;
         min-width: 0;
+
         font-size: 20px;
-        background-color: #005f9120;
+        background-color: transparent;
+
         margin-top: 15px;
         padding: 10px 20px 10px;
         gap: 15px;
     }
+
+    .menu .botao-orcamento:hover{
+        background-color: #0077b6;
+    }
+
     .menu .botao-orcamento span{
         display: none;
     }

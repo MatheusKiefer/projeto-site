@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnMenu=document.getElementById("btn_menu")
     const menu= document.querySelector(".menu")
     const icone=document.getElementById("icon_menu")
+    const btnOrcamento=document.getElementById("orcamento")
     
     
 
@@ -40,6 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
             menu_aberto=0
             icone.textContent="menu"
         }
+
+        encurtar_btn()
+    }
+
+    function encurtar_btn(){
+        if(menu_aberto===1){
+            btnOrcamento.textContent="Orçamento"
+        }
+        else if(menu_aberto===0){
+            btnOrcamento.textContent="Solicitar Orçamento"
+        }
     }
 
     pagina_ativa()
@@ -47,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if(btnMenu){
         btnMenu.addEventListener("click", show_menu)
     }
+
    
 })
 
