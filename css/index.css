@@ -1,10 +1,47 @@
-body{
+@charset "UTF-8";
+
+*{
     margin: 0px;
     padding: 0px;
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+}
+p{
+    text-align: justify;
+}
+footer {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    align-items:normal;
+
+    gap: 20px;
+    padding: 40px;
+    background-color: #091724;
+    color: white;
+    
+}
+footer nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 0 ;
+    padding: 0;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    border-bottom: 2px solid #005f91;
+
+}
+footer ul{
+    margin: 0;
+    list-style: none;
 }
 
+footer a{
+    text-decoration: none;
+    color: white;
+}
 .cabecalho{
     margin: 0;
     display: flex;
@@ -12,7 +49,7 @@ body{
     justify-content:space-between;
     align-items: center;
     gap: 20px;
-    padding: 15px;
+    padding: 5px;
     background-color: white;
     
 }
@@ -107,7 +144,100 @@ body{
     font-size: 30px;
 }
 
-@media (max-width: 720px)
+
+#conhecanos .apresentacao{
+    display: flex;
+    align-items: stretch;
+
+    margin: auto;
+    height: 400px;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#conhecanos .apresentacao article{
+    width: 30%;
+    flex-shrink: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: auto;
+    z-index: 1;
+}
+
+#conhecanos .apresentacao article::after{
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: 120px;
+    height: 100%;
+    top:0;
+
+    background: linear-gradient(to right, white, transparent);
+}
+
+#conhecanos .apresentacao h2{
+    text-align: left;
+    margin: 0;
+    font: 900 4em 'Archivo black', sans-serif;
+}
+
+
+#conhecanos .apresentacao h2 span{
+    font: inherit;
+    color: #298EC6;
+}
+
+#conhecanos .apresentacao p{
+    text-align: left;
+    margin: 20px 0px 0px;
+}
+
+#conhecanos .apresentacao img{
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    background-image: linear-gradient(to left white);
+}
+
+#conhecanos .nossa_historia{
+    display: flex;
+    align-items: stretch;
+
+    max-height: 800px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+} 
+
+#conhecanos .nossa_historia article{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+    margin: auto;
+} 
+
+#conhecanos .nossa_historia article h3{
+    font: 900 3em 'Archivo black', sans-serif;
+}
+
+
+@media (max-width: 730px)
 {
     .cabecalho{
         display: grid;
@@ -151,7 +281,6 @@ body{
     }
 
     
-    
     .cabecalho:has(.menu.aberto) .botao_mobile {
         color: #fcfafa;
         font-family: 'Courier New', Courier, monospace;
@@ -185,7 +314,7 @@ body{
         box-sizing: border-box;
         color: #fcfafa;
     }
-    
+
     .menu li a.ativo{
         display: flex;
         align-items: center;
@@ -233,5 +362,8 @@ body{
     .menu .botao-orcamento span{
         display: none;
     }
-  
+    #conhecanos .apresentacao h2{
+        font: 900 2em 'Archivo black', sans-serif;
+        
+    }
 }
