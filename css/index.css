@@ -27,7 +27,7 @@ footer nav{
     justify-content: space-between;
     gap: 25px;
     margin: 0 ;
-    padding: 0;
+    padding-bottom: 10px;
     flex-wrap: nowrap;
     flex-grow: 1;
     border-bottom: 2px solid #005f91;
@@ -38,10 +38,18 @@ footer ul{
     list-style: none;
 }
 
+footer .redes_sociais{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
 footer a{
     text-decoration: none;
     color: white;
 }
+
 .cabecalho{
     margin: 0;
     display: flex;
