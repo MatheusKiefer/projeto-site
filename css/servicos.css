@@ -263,7 +263,7 @@ main > section, main > aside{
 }
 
 #carrosel summary:hover figure img{
-    tranform: scale(1.06);
+    transform: scale(1.06);
 }
 
 #carrosel details[open] figure img{
@@ -292,5 +292,76 @@ main > section, main > aside{
     background: #091724;
     transform: rotate(180deg);
 }
+
+#carrosel figcaption{
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 36px 16px 14px;
+    background: linear-gradient(to top, rgba(9, 23, 36, 0.9), transparent);
+    color: #ffffff;
+    font-family: 'Montserrat', 'Century Gothic', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+#carrosel details > p, #carrosel details > h3,
+#carrosel details > ul, #carrosel details > .botao-orcamento{
+    margin-inline: 20px;
+}
+
+#carrosel details > p{
+    margin-top: 20px;
+    color: #55646f;
+}
+
+#carrosel details > h3{
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #0077b6;
+}
+
+#carrosel details > ul li{
+    position: relative;
+    padding: 4px 0 4px 26px;
+}
+
+#carrosel details > ul li::before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0077b6;
+    font-weight: 700;
+}
+
+#carrosel details > .botao-orcamento{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 22px;
+}
+
+@media(min-width:721px){
+    #carrosel > li:has(details[open]) {
+        flex-basis: min(760px,100%);
+    border: 1px solid #dbe7f0;
+    border-radius: 12px;
+    box-shadow: 0 10px 28px rgba(0, 119, 182, 0.14);
+    }
+    
+#carrosel details[open]{
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    grid-template-rows: auto auto auto 1fr;
+    min-height: 360px;
+}
+
+#carrosel details[open] > summary{
+    grid-column: 1;
+    grid-row: 1 / 5;
+    align-self: stretch;
+}
+
+}
+
 
 
