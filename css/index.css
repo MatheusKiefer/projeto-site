@@ -20,6 +20,7 @@
 .menu ul{
     display: flex;
     align-items: center;
+    flex-basis:200px;
     gap: 25px;
     list-style: none;
     margin: 0;
