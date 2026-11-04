@@ -7,48 +7,101 @@
     <title>Alfa & Omega Pinturas</title>
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script type="text/javascript" defer src="js/script.js"></script>
 </head>
 <body id="conhecanos">
-    <header class="cabecalho">
-        <a href="inicio.html">
-            <img class="imagem-logo"
+
+   <header class="cabecalho">
+
+        <a href="index.html">
+            <img id="logo_cab" class="imagem-logo"
                  src="img/logo_topo_site.png"
-                 alt="Alfa & Omega Pinturas">
-        </a>
+                 alt="Logomarca Alfa & Omega Pinturas"></a>
+
+        <button id="btn_menu" class="botao_mobile">
+            <span id="icon_menu" class="material-symbols-outlined">menu</span>
+        </button>
+
         <nav class="menu">
             <ul>
-                <li><a href="inicio.html">Início</a></li>
-
-                <li>
-                    <a class="ativo" href="quemsomos.html">Quem Somos</a>
-                </li>
-
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="depoimentos.html">Depoimentos</a></li>
-                <li><a href="duvidas.html">Dúvidas</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a id="menu_1" href="index.html">Início</a></li>
+                <li><a id="menu_2" href="servicos.html">Serviços</a></li>
+                <li><a id="menu_3" href="quemsomos.html">Quem Somos</a></li>
             </ul>
-        </nav>
-        <a class="botao-orcamento" href="orcamento.html">
+        
+
+        <a class="botao-orcamento" id="orcamento" href="orcamento.html">
             Solicitar Orçamento
-            <span>→</span>
+            <span class="material-symbols-outlined">trending_flat</span>
         </a>
+        </nav>
+
     </header>
+
     <main>
-        <section>
-            <h2>
-                Bem-vindo(a)
-            </h2>
-            <p>
-                Esse é o meu primeiro site em html.
-            </p>
+
+        <section class="apresentacao">
+            <article>
+                <h2>
+                    Quem <span>Somos</span>
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quos, fuga eos et ipsa corporis fugiat dicta, voluptates aliquam voluptas nemo quisquam, praesentium id? Quasi consequatur cumque rerum similique aperiam!
+                </p>
+            </article>
+            <img src="img/imagem_quemsomos.png" alt="Imagem ilustrativa de serviço de pintura sendo feito">
         </section>
+
+        <section class="nossa_historia">
+
+            <img src="img/logo_tipo_site_sem_escrita.png" alt="logo do site">
+
+            <article>
+                <h3>Um pouco da nossa história</h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aut, accusantium suscipit aspernatur veritatis quasi ipsa quibusdam, nesciunt ex doloribus, numquam laboriosam quaerat vel provident tenetur similique soluta voluptas! Molestias!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis impedit ullam consequuntur hic sed, nam rerum aliquam officia soluta tempora repellat explicabo inventore, veritatis odio! Repellat odio nemo corporis officiis.</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dignissimos neque? Libero temporibus odio fugiat quasi voluptatibus reiciendis assumenda id amet doloremque obcaecati, reprehenderit expedita magnam exercitationem praesentium excepturi nobis!
+                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi voluptatibus dolor nostrum minima cumque, doloremque sequi impedit, ipsam id necessitatibus fuga rem iste est corporis perspiciatis quam minus omnis temporibus?</p>
+
+            </article>
+
+        </section>
+
     </main>
-    <footer>
+    
+     <footer>
+        <nav>
+            <img id="logo_cab" class="imagem-logo"
+                    src="img/logo_topo_site.png"
+                    alt="Logomarca Alfa & Omega Pinturas">   
+                <ul>
+                    <li><a id="menu_1" href="index.html">Início</a></li>
+                    <li><a id="menu_2" href="servicos.html">Serviços</a></li>
+                    <li><a id="menu_3" href="quemsomos.html">Quem Somos</a></li>
+                </ul>
+                <ul class="redes_sociais">
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="bi bi-instagram"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="https://wa.me/5548999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="bi bi-whatsapp"></span></a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:contato@exemplo.com" aria-label="E-mail"><span class="bi bi-envelope-fill"></span></a>
+                    </li>
+                </ul>
+        </nav>
         <p>
-            @2026 meu site
+            @2026 Projeto estudantil Alfa & Ômega pinturas. Todos os direitos reservados
         </p>
     </footer>
+
 </body>
 </html>
