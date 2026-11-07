@@ -4,10 +4,7 @@ html{
 
 main *,
 main*::before,
-main*::after,
-footer#contato,
-footer#contato *,
-footer#contato *::after {
+main*::after{
     box-sizing: border-box;
 }
 
@@ -21,18 +18,21 @@ main img {
     max-width: 100%;
 }
 
-main ul, footer#contato ul{
+main ul{
     margin: 0;
     padding: 0;
     list-style:none;
 }
 
-main h1, main h2, main h3, main p, main figure,
-footer#contato h2, footer#contato p{
+main h1, main h2, main h3, main p, main figure{
     margin: 0;
 }
 
-main h1, main h2, main h3, footer#contato h2{
+main p{
+    text-align: left;
+}
+
+main h1, main h2, main h3{
     font-family: 'Montserrat' , 'Century Gothic' , 'Segoe UI' , Arial, sans-serif;
     line-height: 1.2;
     color:#091724;
@@ -61,14 +61,22 @@ main .botao-secundario{
     transition: background-color 0.25s, color 0.25s, tranform 0.25s;
 }
 
-main .botao-orcamento:hover{
+main .botao-orcamento,
+main .botao-orcamento:visited{
+    background: #0077b6;
+    color: #ffffff;
+}
+
+main .botao-orcamento:hover,
+main .botao-orcamento:focus-visible{
     background-color: #005f91;
     border-color: #005f91;
     transform: translateY(-2px);
 }
 
-main .botao-secundario{
-    background-color: transparent;
+main .botao-secundario,
+main .botao-secundario:visited{
+    background: transparent;
     color: #0077b6;
 }
 
@@ -86,34 +94,44 @@ main > section, main > aside{
 }
 
 #apresentacao{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: max-content max-content 1fr 1fr;
-    grid-template-areas: 
-    "titulo    titulo    titulo imagem"
-        "subtitulo subtitulo subtitulo imagem"
-        "texto     texto     texto  imagem"
-        "botao1    botao2    .      imagem";
+    grid-template-columns: auto auto 1fr;
+    grid-template-areas:
+        "titulo    titulo    titulo"
+        "subtitulo subtitulo subtitulo"
+        "texto     texto     texto"
+        "botao1    botao2    .";
     align-content: center;
+    align-items: start;
     column-gap: 12px;
     row-gap: 16px;
+    width: 100%;
+    max-width: none;
+    min-height: 500px;
+    margin-inline: auto;
     padding-block: 56px;
+    padding-inline: max(5%, calc(55% - 600px));
 }
 
 #apresentacao h1{
     grid-area: titulo;
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-size: clamp(48px, 5vw, 72px);
 }
 
 #apresentacao h2{
     grid-area: subtitulo;
-    font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+    max-width: 560px;
+    font-size: clamp(24px, 2.4vw, 34px);
     color: #25465b;
 }
 
 #apresentacao > p{
     grid-area: texto;
     max-width: 52ch;
-    color:#55646f;
+    color: #3f4d58
 }
 
 #apresentacao > .botao-orcamento{
@@ -122,23 +140,38 @@ main > section, main > aside{
 
 #apresentacao > .botao-secundario{
     grid-area: botao2;
+    background: #ffffff;
+}
+
+#apresentacao > .botao-secundario:hover{
+    background: #0077b6;
 }
 
 #apresentacao figure{
-    grid-area: imagem;
-    align-self: stretch;
-    min-height: 320px;
-    margin-left: 36px;
-    border-radius: 16px;
+    position: absolute;
+    inset: 0 0 0 auto;
+    z-index: -1;
+    width: 65%;
+    height: 100%;
+    margin: 0;
     overflow: hidden;
-    background: #eef5fa;
-    box-shadow: 0 8px 24px rgba(9, 23, 36, 0.12);
+    background-color: #dbeaf4;
 }
 
 #apresentacao figure img{
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+}
+
+#apresentacao figure::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,#ffffff 0%,
+    rgba(255, 255, 255, 0.9)18%, rgba(255, 255, 255, 0)60%);
 }
 
 #aviso-prazos{
@@ -153,8 +186,8 @@ main > section, main > aside{
 
 #aviso-prazos h3{
     margin-bottom: 6px;
-    font-size: 1.05rem;
-    color: #0077b6;
+    font-size: 21px
+    color #0077b6;
 }
 
 #aviso-prazos p{
@@ -176,7 +209,7 @@ main > section, main > aside{
 
 #carrosel-servicos > header > p:first-child{
     margin-bottom: 6px;
-    font-size: 0.85rem;
+    font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
@@ -185,7 +218,7 @@ main > section, main > aside{
 
 #carrosel-servicos > header h2{
     margin-bottom: 8px;
-    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-size: clamp(30px, 3vw, 42px);
 }
 
 #carrosel-servicos > p:last-child{
@@ -282,7 +315,7 @@ main > section, main > aside{
     border-radius: 50%;
     background: #0077b6;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 30px;
     line-height: 1;
     transition: tranform 0.3s, background-color 0.3s;
 }
@@ -301,7 +334,7 @@ main > section, main > aside{
     color: #ffffff;
     font-family: 'Montserrat', 'Century Gothic', 'Segoe UI', Arial, sans-serif;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 22px;
 }
 
 #carrosel details > p, #carrosel details > h3,
@@ -317,7 +350,7 @@ main > section, main > aside{
 #carrosel details > h3{
     margin-top: 18px;
     margin-bottom: 8px;
-    font-size: 1rem;
+    font-size: 20px;
     color: #0077b6;
 }
 
@@ -361,7 +394,232 @@ main > section, main > aside{
     align-self: stretch;
 }
 
+#carrosel details[open] figure{
+    position: relative;
+    height: 100%;
+    min-height: 360px;
+    overflow: visible;
 }
 
+#carrosel details[open] figure img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+#carrosel details[open] figcaption{
+    position: absolute;
+    inset: auto;
+    top: 26px;
+    left: calc(100% + 28px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: max-content;
+    max-width: 400px;
+    padding: 0;
+    background: none;
+    color: #091724;
+    font-size: 23px;
+}
 
+#carrosel details[open] figcaption ::before{
+    content: "";
+    flex: none;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#carrosel details[open] > p, #carrosel details[open] > h3,
+#carrosel details[open] > ul, #carrosel details[open] > .botao-orcamento{
+    grid-column: 2;
+    margin-inline: 28px;
+}
+
+#carrosel details[open] > p{
+    margin-top: 74px;
+    font-size: 19px;
+}
+
+#carrosel details[open] > h3{
+    margin-top: 16px;
+    font-size: 18px;
+}
+
+#carrosel details[open] > h3::after{
+    content: ":";
+}
+
+#carrosel details[open] > ul li{
+    font-size: 19px;
+}
+
+#carrosel details[open] > .botao-orcamento{
+    justify-self: start;
+    align-items: end;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    padding: 10px 24px;
+}
+
+#diferenciais{
+    padding-block: 48px;
+    text-align: center;
+}
+
+#diferenciais h2{
+    margin-bottom: 32px;
+    font-size: clamp(28px, 3vw, 40px);
+}
+
+#diferenciais ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+#diferenciais li{
+    padding: 24px 16px;
+    border-top: 4px solid #0077b6;
+    border-radius: 16px;
+    background: #eef5fa;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#diferenciais h3{
+    margin-bottom: 6px;
+    font-size: 21px;
+}
+
+#diferenciais p{
+    color: #55646f;
+}
+
+#chamada-final{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "titulo botao"
+        "texto  botao"
+        "frase  botao";
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 12px;
+    width: 90%;
+    max-width: calc(1200px - 10%);
+    margin-block: 24px 64px;
+    padding: 40px 48px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #091724, #25465B);
+    color: #ffffff;
+}
+
+#chamada-final h2{
+    grid-area: titulo;
+    font-size: clamp(28px, 3vw, 40px);
+    color: #ffffff;
+}
+
+#chamada-final p{
+    grid-area: texto;
+    max-width: 690px;
+    color: #d3e3ef;
+}
+
+#chamada-final .botao-orcamento{
+    grid-area: botao;
+    justify-self: end;
+}
+
+#chamada-final h3{
+    grid-area: frase;
+    margin-top: 4px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    color: #6ec1f0;
+}
+
+@media(max-width:900px){
+    #apresentacao{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "titulo"
+            "subtitulo"
+            "texto"
+            "botao1"
+            "botao2";
+        min-height: 0;
+        padding-block: 40px;
+    }
+
+#apresentacao figure{
+    width: 100%;
+}
+
+#apresentacao figure::after{
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.7));
+}
+
+#apresentacao > .botao-orcamento,
+#apresentacao > .botao-secundario{
+    justify-self: start;
+}
+
+#chamada-final{
+    grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulo"
+            "texto"
+            "frase"
+            "botao";
+        padding: 32px 24px;
+        text-align: center;
+}
+
+#chamada-final p{
+    max-width: none;
+    text-align: center;
+}
+
+    #chamada-final .botao-orcamento{
+        justify-self: center;
+        margin-top: 8px;
+    }
+}
+
+@media(max-width: 720px){
+    #carrosel-servicos{
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #carrosel-anterior, #carrosel-proximo{
+        display: none;
+    }
+
+    #carrosel > li, #carrosel > li:has(details[open]){
+        flex-basis: 85%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html,
+    #carrosel {
+        scroll-behavior: auto;
+    }
+ 
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+}
