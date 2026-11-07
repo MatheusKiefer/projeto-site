@@ -13,10 +13,9 @@ footer {
     margin: 0;
     display: flex;
     flex-flow: column;
-    align-items:normal;
 
     gap: 20px;
-    padding: 40px;
+    padding: 2%;
     background-color: #091724;
     color: white;
     
@@ -276,7 +275,7 @@ footer a{
         top: 0;
         right:-100%;
         height: 100vh;
-        width: 45%;
+        width: 70%;
         max-width: auto;
 
         
@@ -386,6 +385,11 @@ footer a{
 
     footer img{
         display: none;
+    }
+    
+    footer .redes_sociais{
+        padding: 0;
+        
     }
     #conhecanos .apresentacao{
         display: block;
