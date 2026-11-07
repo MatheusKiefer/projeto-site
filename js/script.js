@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnOrcamento=document.getElementById("orcamento")
     
     
-
+    /* Sublinha a pagina no menu no css de acordo com a pagina em que está*/
     function pagina_ativa(){
         let paginaAtual =window.location.pathname
         
@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let menu_aberto=0
 
+    /*Transforma o icone de menu hamburguer em um X*/
+
     function show_menu(){
         if(menu_aberto===0){
             menu.classList.add("aberto")
@@ -45,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         encurtar_btn()
     }
 
+    /*Encurta o texto do botão Solicitar orçamento*/
     function encurtar_btn(){
         if(menu_aberto===1){
             btnOrcamento.textContent="Orçamento"
