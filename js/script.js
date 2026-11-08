@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    
     const btnMenu=document.getElementById("btn_menu")
     const menu= document.querySelector(".menu")
     const icone=document.getElementById("icon_menu")
@@ -46,6 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         encurtar_btn()
     }
+    document.addEventListener("click", (event) =>{
+        if(menu.classList.contains("aberto")){
+            
+            const clickFora= !menu.contains(event.target)
+            const clickForaBotao= !btnMenu.contains(event.target)
+
+            if(clickFora && clickForaBotao){
+                show_menu()
+            }
+        }
+    })
+
 
     /*Encurta o texto do botão Solicitar orçamento*/
     function encurtar_btn(){
@@ -61,8 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if(btnMenu){
         btnMenu.addEventListener("click", show_menu)
+        
+    }
+    window.addEventListener("scroll", ()=>{
+        if(menu.classList.contains("aberto")){
+            show_menu()
+        }
     }
 
+    )
    
-})
 
