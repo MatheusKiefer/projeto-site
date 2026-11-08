@@ -13,6 +13,7 @@ footer {
     margin: 0;
     display: flex;
     flex-flow: column;
+    width: 100%;
 
     gap: 20px;
     padding: 2%;
