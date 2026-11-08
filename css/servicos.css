@@ -236,18 +236,6 @@ main > section, main > aside{
     transition: background-color 0.25s, transform 0.25s;
 }
 
-#carrosel-anterior:hover, #carrosel-proximo:hover{
-    background: #0077b6;
-    transform: scale(1.08);
-}
-
-#carrosel-anterior:disabled, #carrosel-proximo:disabled{
-    background: #091724;
-    opacity: 0.35;
-    cursor: default;
-    transform: none;
-}
-
 #carrosel{
     display:flex;
     align-items: flex-start;
