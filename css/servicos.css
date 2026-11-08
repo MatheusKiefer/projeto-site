@@ -3,8 +3,8 @@ html{
 }
 
 main *,
-main*::before,
-main*::after{
+main *::before,
+main *::after{
     box-sizing: border-box;
 }
 
@@ -40,7 +40,7 @@ main h1, main h2, main h3{
 
 main a:focus-visible,
 main button:focus-visible,
-main sumary:focus-visible{
+main summary:focus-visible{
     outline: 3px solid #0077b6;
     outline-offset: 3px;
 }
@@ -87,33 +87,29 @@ main .botao-secundario:hover{
 }
 
 main > section, main > aside{
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1100px;
     margin-inline: auto;
-    padding-inline: 5%;
+    padding-inline: 0;
 }
 
 #apresentacao{
     position: relative;
     isolation: isolate;
-    overflow: hidden;
     display: grid;
     grid-template-columns: auto auto 1fr;
+    grid-template-rows: minmax(48px, 1fr) auto auto auto auto minmax(48px, 1fr);
     grid-template-areas:
+        ".         .         ."
         "titulo    titulo    titulo"
         "subtitulo subtitulo subtitulo"
         "texto     texto     texto"
-        "botao1    botao2    .";
-    align-content: center;
-    align-items: start;
+        "botao1    botao2    ."
+        ".         .         .";
     column-gap: 12px;
     row-gap: 16px;
-    width: 100%;
-    max-width: none;
-    min-height: 500px;
-    margin-inline: auto;
-    padding-block: 56px;
-    padding-inline: max(5%, calc(55% - 600px));
+    min-height: 360px;
+    margin-bottom: 24px;
 }
 
 #apresentacao h1{
@@ -148,22 +144,24 @@ main > section, main > aside{
 }
 
 #apresentacao figure{
-    position: absolute;
-    inset: 0 0 0 auto;
+    position: relative;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    justify-self: end;
+    align-self: stretch;
     z-index: -1;
+    display: flex;
     width: 65%;
-    height: 100%;
     margin: 0;
     overflow: hidden;
-    background-color: #dbeaf4;
+    border-radius: 0 16px 16px 0;
+    background-color: #dbeaf4
 }
 
 #apresentacao figure img{
-    display: block;
     width: 100%;
-    height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: right center;
 }
 
 #apresentacao figure::after{
@@ -175,8 +173,6 @@ main > section, main > aside{
 }
 
 #aviso-prazos{
-    width: 90%;
-    max-width: calc(1200px - 10%);
     margin-bottom: 40px;
     padding: 20px 24px;
     border-left: 6px solid #0077b6;
@@ -186,8 +182,8 @@ main > section, main > aside{
 
 #aviso-prazos h3{
     margin-bottom: 6px;
-    font-size: 21px
-    color #0077b6;
+    font-size: 21px;
+    color: #0077b6;
 }
 
 #aviso-prazos p{
@@ -243,6 +239,13 @@ main > section, main > aside{
 #carrosel-anterior:hover, #carrosel-proximo:hover{
     background: #0077b6;
     transform: scale(1.08);
+}
+
+#carrosel-anterior:disabled, #carrosel-proximo:disabled{
+    background: #091724;
+    opacity: 0.35;
+    cursor: default;
+    transform: none;
 }
 
 #carrosel{
@@ -317,7 +320,7 @@ main > section, main > aside{
     color: #ffffff;
     font-size: 30px;
     line-height: 1;
-    transition: tranform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 #carrosel details[open] figure::after{
@@ -461,10 +464,11 @@ main > section, main > aside{
 
 #carrosel details[open] > .botao-orcamento{
     justify-self: start;
-    align-items: end;
+    align-self: end;
     margin-top: 20px;
     margin-bottom: 26px;
     padding: 10px 24px;
+}
 }
 
 #diferenciais{
@@ -510,8 +514,6 @@ main > section, main > aside{
     align-items: center;
     column-gap: 40px;
     row-gap: 12px;
-    width: 90%;
-    max-width: calc(1200px - 10%);
     margin-block: 24px 64px;
     padding: 40px 48px;
     border-radius: 16px;
@@ -548,18 +550,21 @@ main > section, main > aside{
 @media(max-width:900px){
     #apresentacao{
         grid-template-columns: 1fr;
+        grid-template-rows: minmax(32px, 1fr) auto auto auto auto minmax(32px, 1fr);
         grid-template-areas: 
+            "."
             "titulo"
             "subtitulo"
             "texto"
             "botao1"
-            "botao2";
+            "botao2"
+            ".";
         min-height: 0;
-        padding-block: 40px;
     }
 
 #apresentacao figure{
     width: 100%;
+    border-radius: 16px;
 }
 
 #apresentacao figure::after{
@@ -622,5 +627,5 @@ main > section, main > aside{
     }
 
 }
-}
+
 
