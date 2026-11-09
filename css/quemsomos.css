@@ -150,7 +150,7 @@ main .botao-orcamento:focus-visible{
     transform: translateY(-2px);
 }
 
-/* CSS do main */
+/* Configuraçao do texto nossa historia */
 .nossa_historia{
     display: flex;
     align-items: stretch;
@@ -195,6 +195,7 @@ main .botao-orcamento:focus-visible{
 }
 
 aside{
+    margin-top: 2%;
     padding: 20px 24px;
     border-left: 6px solid #0077b6;
     border-radius: 0 16px 16px 0;
@@ -216,12 +217,14 @@ aside p{
     text-align: left;
     font-style: italic;
     max-width: 100%;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     letter-spacing: 2px;
-    color: #298EC6;
+    color: #0077b6;
     line-height: 1.4;
  }
+
+
 
 /* configuração das box dos valores*/
 .nossos-valores{
