@@ -210,7 +210,7 @@ aside p{
 .frase_de_destaque{
     display: flex;
     justify-content: center;
-    padding: 2%;
+    padding: 5%;
 }
 .frase_de_destaque p{
 
