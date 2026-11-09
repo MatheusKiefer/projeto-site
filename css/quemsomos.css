@@ -1,11 +1,16 @@
-
+#conhecanos{
+    
+}
 main{
     color: #1f2d3a;
     line-height: 1.6;
-    margin: 0px;
-    padding: 0px;
     font-family: Arial, sans-serif;
     font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .apresentacao{
@@ -16,9 +21,9 @@ main{
     border-radius: 10px;
     row-gap: 16px;
     width: 100%;
-    height: 620px;
+    height: 520px;
     min-height: 0;
-    margin-left: 8%;
+    margin-left: 0;
    max-width: none;
 
     position: relative;
@@ -41,7 +46,8 @@ main{
 
 .apresentacao article{
     flex: 0 0 40%;
-    padding: 10px 5%;
+    padding: 2px;
+    padding-top:10%;
     margin: auto;
     box-sizing: border-box;
     position: relative;
@@ -119,7 +125,7 @@ main{
     width: auto;
     max-width: none;
     padding: 12px 24px;
-    margin-top: 100px;
+    margin-top: 50px;
 
     border: 2px solid #0077b6;
     border-radius: 999px;
@@ -153,7 +159,7 @@ main .botao-orcamento:focus-visible{
     margin: auto;
     padding: 1%;
     border-radius: 10px;
-    overflow:auto;
+    overflow: hidden;
 } 
 
 .nossa_historia article{
@@ -165,7 +171,7 @@ main .botao-orcamento:focus-visible{
     flex:1;
     min-width: 0;
     padding: 4%;
-    padding-top: 2%;
+    padding-top: 5%;
     gap: 20px;
     box-sizing: border-box;
     margin: auto;
@@ -188,14 +194,14 @@ main .botao-orcamento:focus-visible{
     line-height: 1.4;
 }
 
-.nossa_historia aside{
+aside{
     padding: 20px 24px;
     border-left: 6px solid #0077b6;
     border-radius: 0 16px 16px 0;
     background: #eef5fa;
 }
 
-.nossa_historia aside p{
+aside p{
     font-style: italic;
 }
 
@@ -238,6 +244,7 @@ main .botao-orcamento:focus-visible{
 .nossos-valores ul{
     margin: 0 5%;
      padding: 0;
+     gap: 4px;
 
     display:flex;
     justify-content:space-evenly;
