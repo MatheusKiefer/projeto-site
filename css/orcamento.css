@@ -1,0 +1,131 @@
+.menu #chamar_wpp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background:transparent;
+    color: #0077b6;
+    text-decoration:none;
+    flex-shrink: 0;
+    padding: 1px 20px;
+    border: 2px solid #0077b6;
+    border-radius: 25px;
+    max-width: none;
+    min-width: 0;
+    width: auto;
+}
+
+main{
+    color: #1f2d3a;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    
+    border-radius: 10px;
+    row-gap: 16px;
+    width: 100%;
+    height: 520px;
+    min-height: 0;
+    margin-left: 0;
+   max-width: none;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.apresentacao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40%;
+    width: 210px;
+
+    background: linear-gradient(to right, white, transparent);
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.apresentacao article{
+    flex: 0 0 40%;
+    padding: 2px;
+    padding-top:10%;
+    margin: auto;
+    box-sizing: border-box;
+    position: relative;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+
+    margin: 0;
+   
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: auto;
+
+    z-index: 2;
+
+    background-color: white;
+}
+
+.apresentacao .frase_acima{
+    text-align: left;
+    margin: 0;
+    grid-area: subtitulo;
+    max-width: 560px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #298EC6;
+    line-height: 1.4;
+
+}
+
+.apresentacao h2{
+    text-align: left;
+    margin: 0;
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: 1.2;
+    color: #1f2d3a;
+    margin: 0;
+}
+
+.apresentacao h2 span{
+    font: inherit;
+    color: #298EC6;
+}
+
+.apresentacao p{
+    margin-top: 20px;
+    text-align: start;
+}
+
+
+.apresentacao img{
+    
+    display: block;
+
+    width: 60%;
+    min-width: 0;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
