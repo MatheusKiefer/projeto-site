@@ -9,59 +9,7 @@
 p{
     text-align: justify;
 }
-footer {
-    margin: 0;
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-
-    gap: 20px;
-    padding: 2%;
-    background-color: #091724;
-    color: white;
-    
-}
-footer nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 25px;
-    margin: 0 ;
-    padding-bottom: 10px;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    border-bottom: 2px solid #005f91;
-
-}
-footer h3{
-    font-weight: 600;
-}
-footer img{
-    width: 250px;
-    height: auto;
-    object-fit: contain;
-}
-footer ul{
-    margin: 0;
-    padding: 2px;
-    list-style: none;
-}
-
-footer .redes_sociais{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 10%;
-}
-
-footer a{
-    text-decoration: none;
-    color: white;
-}
-
-.cabecalho{
+    .cabecalho{
     margin: 0;
     display: flex;
     flex-flow: row;
@@ -69,6 +17,7 @@ footer a{
     align-items: center;
     gap: 20px;
     padding: 5px;
+    width: 100%;
     background-color: white;
     
 }
@@ -165,13 +114,66 @@ footer a{
 }
 
 
+footer {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+
+    gap: 20px;
+    padding: 2%;
+    background-color: #091724;
+    color: white;
+    
+}
+footer nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 0 ;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    border-bottom: 2px solid #005f91;
+
+}
+footer h3{
+    font-weight: 600;
+}
+footer img{
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+footer ul{
+    margin: 0;
+    padding: 2px;
+    list-style: none;
+}
+
+footer .redes_sociais{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
 
 @media (max-width: 730px)
 {
     .cabecalho{
         display: grid;
         grid-template-columns: 1fr auto;
-        background-color: #005f9120;
     }
   
     .botao_mobile{

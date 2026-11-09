@@ -2,6 +2,10 @@
     const menu= document.querySelector(".menu")
     const icone=document.getElementById("icon_menu")
     const btnOrcamento=document.getElementById("orcamento")
+    const btnEsquerda=document.getElementById("botao_esquerda")
+    const btnDireita=document.getElementById("botao_direita")
+    var lista_box=document.querySelectorAll(".nossos-valores ul li")
+    var indice=0
     
     
     /* Sublinha a pagina no menu no css de acordo com a pagina em que está*/
@@ -80,5 +84,60 @@
     }
 
     )
+
+    /*Função Carrossel na página quem somos*/
+    window.addEventListener("resize", inicial)
+
+    function inicial(){
+        if(window.matchMedia("(max-width:1320px)").matches){
+
+        btnDireita.onclick=avanca_box;
+        btnEsquerda.onclick=volta_box;
+        mostraBox()
+        }
+
+        else{
+            btnDireita.onclick=null;
+            btnEsquerda.onclick=null;
+        }
+    }
+
+    function volta_box(){
+        if(indice> 0){
+            indice--
+        }
+        else{
+            indice=lista_box.length-1
+        }
+
+        mostraBox()
+    }
+
+    function avanca_box(){
+        if(indice<lista_box.length-1){
+            indice++
+        }
+        else{
+            indice=0
+        }
+        mostraBox()
+    }
+
+    function mostraBox(){
+        for(var i=0; i<lista_box.length; i++){
+            lista_box[i].classList.remove("ativo")
+        }
+
+        lista_box[indice].classList.add("ativo")
+    }
+
+    if (lista_box.length>0){
+         inicial()
+    }
+
+    
+   
+
+
    
 
