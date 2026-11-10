@@ -305,3 +305,205 @@ footer a{
     }
     
 }
+
+.banner-principal
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    min-height: 590px;
+    padding: 70px 7%;
+
+    background-color: #ffffff;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.banner-imagem
+{
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 68%;
+    height: 100%;
+
+    margin: 0;
+    z-index: 0;
+}
+
+.banner-imagem img
+{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-principal::before
+{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient
+    (
+        90deg,
+        #ffffff 0%,
+        #ffffff 30%,
+        rgba(255,255,255,0.96) 43%,
+        rgba(255,255,255,0.72) 55%,
+        rgba(255,255,255,0.10) 80%,
+        transparent 100%
+    );
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.banner-suubtitulo
+{
+    color: #0077b6;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 15x;
+    text-align: left;
+}
+
+.banner-conteudo h1
+{
+    color: #091724;
+
+    font-size: clamp(38px, 4.2, 62px);
+    font-weight: 800;
+    line-height: 1.08;
+
+    margin-bottom: 20px;
+}
+
+.banner-conteudo h1 span
+{
+    display: block;
+
+    color: #0077b6;
+    font-size: inherit;
+}
+
+.banner-descricao
+{
+    color: #394451;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    max-width: 440px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.banner-botoes
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.banner-botoes a
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 22px;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: 0.3;
+}
+
+.banner-botoes .material-symbols-outlined
+{
+    font-size: 20px;
+}
+
+.btn-primario
+{
+    background: linear-gradient
+    (
+        90deg,
+        #008bd2,
+        #005f91
+    );
+
+    color: white;
+}
+
+.btn-primario:hover
+{
+    transform: translate(-3px);
+    box-shadow: 0 5px 15px #00000030;
+}
+
+.btn-secundario
+{
+    color: #0077b6;
+    background-color: white;
+
+    border: 2px solid #0077b6;
+}
+
+.btn-secundario:hover
+{
+    color: white;
+    background-color: #0077b6;
+}
+
+.banner-diferenciais
+{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.banner-diferenciais li
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    max-width: 140px;
+}
+
+.banner-diferenciais .material-symbols-outlined
+{
+    color: #0077b6;
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+.banner-diferenciais p
+{
+    color: #091724;
+
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: left;
+}
