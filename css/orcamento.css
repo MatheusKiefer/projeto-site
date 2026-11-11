@@ -60,8 +60,7 @@ main{
 
 .apresentacao article{
     flex: 0 0 40%;
-    padding: 2px;
-    padding-top:10%;
+    padding: 20 px;
     margin: auto;
     box-sizing: border-box;
     position: relative;
@@ -129,3 +128,91 @@ main{
     object-position: center;
 }
 
+
+/*configuraação do main*/
+
+aside{
+    margin-top: 2%;
+    padding: 20px 24px;
+    border-left: 6px solid #0077b6;
+    border-radius: 0 16px 16px 0;
+    background: #eef5fa;
+}
+
+aside p{
+    font-weight: 300;
+}
+
+
+
+/* Confifuração contate-nos*/
+.contate-nos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.contate-nos h2{
+    font-size: 30px;
+    color: #005f91;
+}
+
+.contate-nos p{
+    font-size: 20px;
+}
+.contate-nos ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.contate-nos a{
+    color: #005f91;
+}
+.contate-nos span{
+    font-size: 30px;
+}
+
+/*configuracão dos formularios*/
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width:100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.formulario form>label{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2d3a;
+}
+
+.formulario input:not([type="radio"]):not([type="checkbox"]), .formulario textarea{
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 2px solid #d0dce5;
+    border-radius: 12px;
+
+    background-color: #eef5fa;
+    color: #1f2d3a;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    box-sizing: border-box;
+    outline: none;
+
+    transition: border-color 0.3s, background-color 0.3s;
+
+}
+
+.formulario .dados_1{
+    display: flex;
+    
+}

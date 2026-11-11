@@ -61,47 +61,110 @@
             
         </section>
 
-        <section class="formulario">
+        
+
+            <aside id="aviso-prazos">
+
+            <h3>Sobre os orçamentos dos serviços</h3>
+
+            <p>
+                Nesta área recolehemos seus dados para fazer uma análise e um pré-orçamento, o orçamento definitivo, assim como os prazos só podem ser efetivamente confirmados após uma visita da equipe no local.
+            </p>
+
+        </aside>
+
+        <section class="dados_1"></section>
 
                 <h1>Conte-nos como será o seu projeto:</h1>
             <form>
-                <label for="nome">Digite seu nome completo:</label><br>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required><br><br>
+                <section class="dados de contato">
+                <label for="nome">Digite seu nome completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
 
-                <label for="email">Informe seu email:</label><br>
-                <input type="email" id="email" name="email" placeholder="nome@mail.com" required><br><br>
+                <label for="email">Informe seu email:</label>
+                <input type="email" id="email" name="email" placeholder="nome@mail.com" required>
 
-                <label for="senha">Informe um whatsapp para contato:</label><br>
-                <input type="text" id="whatsapp" name="whatsapp" placeholder="ex: (48) 9****-****" minlength="10" required><br><br>
+                <label for="whatsapp">Informe um whatsapp para contato:</label>
+                <input type="text" id="whatsapp" name="whatsapp" placeholder="ex: (48) 9****-****" minlength="10" required>
 
-                <label for="idade">Informe sua idade:</label><br>
-                <input type="number" id="idade" name="idade" placeholder="ex.:20"><br><br>
+                <label for="data_inicio">Data em que tem disponibilidade para começar o projeto:</label>
 
-                <label for="data_inicio">Data em que tem disponibilidade para começar o projeto:</label><br>
-                <input type="date" id="data_inicio" name="data_inicio" value="27-08-2026" required><br>
+                </section>
 
-                <p>Informe seu gênero:</p>
-                    <input type="radio" id="masculino" name="genero" value="masculino">
-                    <label for="masculino">Masculino</label><br>
-                    <input type="radio" id="feminino" name="genero" value="feminino">
-                    <label for="feminino">Feminino</label><br><br>
+                <label for="endereco">Endereço para o serviço:</label>
+                <input type="text"
+                    id="endereco"
+                    name="endereco"
+                    placeholder="Rua, número e bairro"
+                    autocomplete="street-address"
+                    required>
 
-                <p>Em qual atração você pretende ir?</p>
+                <p>Informe se o serviço será em área externa ou interna:</p>
+                    <input type="radio" id="interno" name="area" value="Interno">
+
+                    <label for="interno">Interna</label>
+
+                    <input type="radio" id="externo" name="area" value="Externo">
+                    <label for="externo">Externa</label>
+
+                    <input type="radio" id="ambos" name="area" value="ambos">
+                    <label for="ambos">Ambas</label>
+
+                <p>Marque qual servico você pretende realizar:</p>
                     <input type="checkbox" id="pintura-residencial" name="pintura-residencial">
-                    <label for="pintura-residencial">Pintura residencial</label><br>
+
                     <input type="checkbox" id="Pintura Comercial" name="Pintura Comercial">
-                    <label for="Pintura Comercial">Pintura Comercial</label><br>
+
                     <input type="checkbox" id="impermeabilizacao" name="impermeabilizacao">
-                    <label for="impermeabilizacao">Impermeabilização</label><br>
+
                     <input type="checkbox" id="texturas" name="texturas">
-                    <label for="texturas">Texturas e efeitos</label><br><br>
-                    
+                    <label for="texturas">Texturas e efeitos</label>
                     <label for="repintura">Repintura e renovação</label>
                     <input type="checkbox" id="repintura" name="repintura">
+
+                    <label for="descricao">Descreva brevemente o serviço que precisa ser feito</label>
+                    <textarea
+                        id="descricao"
+                        name="descricao"
+                        placeholder="Descreva o serviço que você precisa..."
+                        rows="6"
+                        required
+                    ></textarea>
+
+                    <label for="fotos">Adicione fotos do local:</label>
+                    <input
+                        type="file"
+                        id="fotos"
+                        name="fotos"
+                        accept="image/*"
+                        multiple
+                    >
+
                     <button type="submit">Enviar</button>
             </form>
 
         </section>
+
+        <section class="contate-nos">
+        <h2>Você também pode nos contatar:</h2>
+        <p>Siga-nos no Instagram e contate-nos via whatsapp ou telefone</p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/alfaeomegapinturass?utm_source=ig_web_button_share_sheet&mdxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="bi bi-instagram"></span></a>
+                </li>
+                <li>
+                    <a href="https://wa.me/55189968708?text=Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Alfa%20e%20%C3%94mega!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="bi bi-whatsapp"></span></a>
+                </li>
+                 <li>
+                    <a href="tel:+5518996870839" aria-label="Telefone"><span class="bi bi-telephone"></span></a>
+                </li>
+            </ul>
+        </nav>
+
+    </section>
+
+
     </main>
 
 
