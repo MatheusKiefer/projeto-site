@@ -214,5 +214,6 @@ aside p{
 
 .formulario .dados_1{
     display: flex;
-    
+    font-size: 50px;
+
 }
