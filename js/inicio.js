@@ -4,10 +4,7 @@ var imagens = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg", "
 
 // O carrossel da Home não usa os controles da página Quem Somos.
 // Evita que o evento de resize do JS compartilhado tente acessá-los.
-if (typeof inicial === "function") {
-    window.removeEventListener("resize", inicial);
-}
-
+if (typeof inicial === "function") {window.removeEventListener("resize", inicial);}
 const carrossel = document.getElementById("carrossel-projetos");
 if (carrossel && imagens.length) {
     const anterior = document.getElementById("projeto-anterior");
