@@ -159,7 +159,7 @@ main .botao-orcamento:focus-visible{
     margin: auto;
     padding: 1%;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: scroll;
 } 
 
 .nossa_historia article{
