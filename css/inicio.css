@@ -396,6 +396,9 @@
     color: white;
 }
 
+
+/* RESPONSIVIDADE EMPRESA E SERVIÇOS */
+
 @media (max-width: 950px) {
     .conheca-empresa {
         grid-template-columns: 1fr;
@@ -448,7 +451,7 @@
 
 
 /* PROJETOS REALIZADOS */
-/* CARROSSEL COM SUPORTE A SWIPE */
+/* CARROSSEL COM SWIPE PARA CELULARES E MOUSE */
 
 .projetos-realizados {
     width: 95%;
@@ -469,11 +472,11 @@
     width: 100%;
     overflow: hidden;
 
-    /* Permite rolagem vertical da página */
+    /* Mantém a rolagem vertical da página */
     touch-action: pan-y;
 }
 
-/* Faixa que contém todas as imagens */
+/* Faixa com as imagens */
 
 .carrossel-faixa {
     display: flex;
@@ -481,24 +484,22 @@
     transition: transform 350ms ease;
     will-change: transform;
 
-    /* Permite gestos horizontais via JavaScript */
+    /* Controle dos gestos de toque */
     touch-action: pan-y;
 
-    /* Impede seleção acidental ao arrastar */
+    /* Impede seleção acidental */
     user-select: none;
     -webkit-user-select: none;
 
-    /* Indica que o carrossel pode ser arrastado */
+    /* Indica que pode ser arrastado */
     cursor: grab;
 }
-
-/* Cursor enquanto o mouse está pressionado */
 
 .carrossel-faixa:active {
     cursor: grabbing;
 }
 
-/* Cards individuais */
+/* Cards do carrossel */
 
 .projeto-card {
     flex: 0 0 calc((100% - 40px) / 3);
@@ -507,11 +508,12 @@
     border-radius: 18px;
     overflow: hidden;
 
+    touch-action: pan-y;
     user-select: none;
     -webkit-user-select: none;
 }
 
-/* Imagens do carrossel */
+/* Imagens */
 
 .projeto-card img {
     display: block;
@@ -519,16 +521,16 @@
     height: 320px;
     object-fit: cover;
 
-    /* Impede o arrasto nativo das imagens */
+    /* Impede o arrasto nativo da imagem */
+    -webkit-user-drag: none;
     user-select: none;
     -webkit-user-select: none;
-    -webkit-user-drag: none;
 
-    /* Garante que a imagem receba gestos de toque */
+    /* Permite gestos horizontais */
     touch-action: pan-y;
 }
 
-/* Botões de navegação */
+/* Botões do carrossel */
 
 .setas-projetos {
     display: flex;
@@ -553,15 +555,14 @@
     color: white;
 }
 
-/* Tablets: duas imagens visíveis */
+
+/* RESPONSIVIDADE DO CARROSSEL */
 
 @media (max-width: 900px) {
     .projeto-card {
         flex-basis: calc((100% - 20px) / 2);
     }
 }
-
-/* Celulares: uma imagem visível */
 
 @media (max-width: 600px) {
     .projeto-card {
@@ -995,13 +996,15 @@
     }
 }
 
-/* ACESSIBILIDADE: MOVIMENTO REDUZIDO */
+
+/* ACESSIBILIDADE */
 
 @media (prefers-reduced-motion: reduce) {
     .carrossel-faixa {
         transition-duration: 0.01ms;
     }
 }
+
 
 /* AJUSTES FINAIS PARA CELULARES */
 
@@ -1015,4 +1018,31 @@
         min-width: 0;
         max-width: 100%;
     }
+}
+
+
+/* CONTROLE DE TOQUE DO CARROSSEL */
+/* Compatibilidade com o JavaScript atualizado */
+
+#carrossel-projetos,
+#carrossel-projetos .carrossel-faixa,
+#carrossel-projetos .projeto-card,
+#carrossel-projetos .projeto-card img {
+    touch-action: pan-y;
+}
+
+#carrossel-projetos .carrossel-faixa {
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: grab;
+}
+
+#carrossel-projetos .carrossel-faixa:active {
+    cursor: grabbing;
+}
+
+#carrossel-projetos .projeto-card img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
 }
