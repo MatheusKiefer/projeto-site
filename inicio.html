@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa & Omega Pinturas</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/inicio.js" defer></script>
+</head>
+<body class="pagina-inicio">
+ 
+    
+
+    <header class="cabecalho">
+
+        <a href="inicio.html">
+            <img id="logo_cab" class="imagem-logo"
+                 src="img/logo_topo_site.png"
+                 alt="Logomarca Alfa & Omega Pinturas"></a>
+
+        <button id="btn_menu" class="botao_mobile">
+            <span id="icon_menu" class="material-symbols-outlined">menu</span>
+        </button>
+
+        <nav class="menu">
+            <ul>
+                <li><a id="menu_1" href="inicio.html">Início</a></li>
+                <li><a id="menu_2" href="servicos.html">Serviços</a></li>
+                <li><a id="menu_3" href="quemsomos.html">Quem Somos</a></li>
+            </ul>
+        
+
+        <a class="botao-orcamento" id="orcamento" href="orcamento.html">
+            Solicitar Orçamento
+            <span class="material-symbols-outlined">trending_flat</span>
+        </a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="banner-principal">
+            <figure class="banner-imagem">
+                <img src="img/inicio-banner.png" alt="Profissional pintando parede">
+            </figure>
+            <section class="banner-conteudo">
+                <p class="banner-subtitulo">MAIS QUE PINTURA, NOVOS COMEÇOS</p>
+                <h1>Pintura profissional para <span>transformar seus ambientes</span></h1>
+                <p class="banner-descricao">Pinturas residenciais e comerciais com qualidade, pontualidade e acabamento impecável.</p>
+                <nav class="banner-botoes" aria-label="Ações principais">
+                    <a href="orcamento.html" class="btn-primario">Solicitar orçamento <span class="material-symbols-outlined">arrow_forward</span></a>
+                    <a href="servicos.html" class="btn-secundario">Conheça nossos serviços <span class="material-symbols-outlined">arrow_forward</span></a>
+                </nav>
+                <ul class="banner-diferenciais">
+                    <li><span class="material-symbols-outlined">groups</span><p>Equipe especializada</p></li>
+                    <li><span class="material-symbols-outlined">verified_user</span><p>Materiais de qualidade</p></li>
+                    <li><span class="material-symbols-outlined">support_agent</span><p>Atendimento personalizado</p></li>
+                    <li><span class="material-symbols-outlined">event_available</span><p>Compromisso com prazos</p></li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="conheca-empresa">
+            <section class="empresa-apresentacao">
+                <p class="empresa-subtitulo">CONHEÇA A ALFA & ÔMEGA</p>
+                <h2>Mais que pintura, <span>cuidado em cada detalhe</span></h2>
+                <p class="empresa-descricao">Somos uma empresa especializada em pinturas residenciais e comerciais, comprometida em transformar ambientes com qualidade, organização e acabamento impecável.</p>
+                <ul class="empresa-indicadores">
+                    <li><span class="material-symbols-outlined">task_alt</span><p><strong>+60</strong> Projetos concluídos</p></li>
+                    <li><span class="material-symbols-outlined">groups</span><p><strong>+40</strong> Clientes satisfeitos</p></li>
+                    <li><span class="material-symbols-outlined">engineering</span><p><strong>Equipe</strong> Especializada</p></li>
+                    <li><span class="material-symbols-outlined">star</span><p><strong>Compromisso</strong> Com a qualidade</p></li>
+                </ul>
+                <a href="quemsomos.html" class="empresa-botao">Conheça-nos <span class="material-symbols-outlined">arrow_forward</span></a>
+            </section>
+
+            <section class="empresa-servicos">
+                <h2>Exemplos de serviços</h2>
+                <section class="cards-servicos">
+                    <article class="card-servico">
+                        <figure class="servico-imagem"><img src="img/servico-externa.jpg" alt="Pintura externa" loading="lazy"></figure>
+                        <section class="card-conteudo">
+                            <h3>Pintura externa</h3>
+                            <p>Proteção, valorização e um novo visual para fachadas, muros e áreas externas.</p>
+                        </section>
+                    </article>
+                    <article class="card-servico">
+                        <figure class="servico-imagem"><img src="img/servico-preparacao.jpg" alt="Preparação para pintura" loading="lazy"></figure>
+                        <section class="card-conteudo">
+                            <h3>Preparação para pintura</h3>
+                            <p>Tratamento de superfícies, correções e nivelamento para um acabamento duradouro.</p>
+                        </section>
+                    </article>
+                </section>
+                <a href="servicos.html" class="botao-todos-servicos">Conheça todos os serviços <span class="material-symbols-outlined">arrow_forward</span></a>
+            </section>
+        </section>
+
+        <section class="projetos-realizados">
+            <h2>Projetos realizados</h2>
+            <section id="carrossel-projetos" class="carrossel-projetos" aria-label="Fotos dos projetos realizados"></section>
+            <nav class="setas-projetos" aria-label="Navegação do carrossel">
+                <button id="projeto-anterior" type="button" aria-label="Projeto anterior">❮</button>
+                <button id="projeto-proximo" type="button" aria-label="Próximo projeto">❯</button>
+            </nav>
+        </section>
+
+        <section class="diferenciais">
+            <p class="diferenciais-subtitulo">POR QUE ESCOLHER A ALFA & ÔMEGA?</p>
+            <h2>Somos a escolha certa para o seu projeto</h2>
+            <ul class="diferenciais-lista">
+                <li><span class="material-symbols-outlined">diamond</span><h3>Qualidade</h3><p>Acabamento impecável</p></li>
+                <li><span class="material-symbols-outlined">schedule</span><h3>Pontualidade</h3><p>Respeito ao seu tempo</p></li>
+                <li><span class="material-symbols-outlined">construction</span><h3>Organização</h3><p>Ambiente limpo e protegido</p></li>
+                <li><span class="material-symbols-outlined">format_paint</span><h3>Capricho</h3><p>Atenção em cada detalhe</p></li>
+                <li><span class="material-symbols-outlined">support_agent</span><h3>Atendimento</h3><p>Suporte do início ao fim</p></li>
+                <li><span class="material-symbols-outlined">verified_user</span><h3>Materiais de qualidade</h3><p>Marcas reconhecidas e alto desempenho</p></li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <p class="faq-subtitulo">TIRE SUAS DÚVIDAS</p>
+            <h2>Perguntas frequentes</h2>
+            <details name="faq"><summary>Vocês realizam pinturas residenciais e comerciais?</summary><p>Sim! Trabalhamos com pinturas residenciais e comerciais, adaptando os serviços às necessidades de cada ambiente.</p></details>
+            <details name="faq"><summary>É necessário preparar as paredes antes da pintura?</summary><p>Depende das condições da superfície. Podemos realizar correções, aplicação de massa e lixamento para garantir um acabamento de qualidade.</p></details>
+            <details name="faq"><summary>Como posso solicitar um orçamento?</summary><p>Basta acessar nossa página de orçamento e enviar as informações sobre o serviço desejado.</p></details>
+            <details name="faq"><summary>Quanto tempo leva para concluir uma pintura?</summary><p>O prazo depende do tamanho da área, das condições das superfícies e do serviço solicitado.</p></details>
+        </section>
+
+        <section class="cta-final">
+            <figure class="cta-icone"><span class="material-symbols-outlined">format_paint</span></figure>
+            <section class="cta-texto">
+                <h2>Vamos transformar seu ambiente?</h2>
+                <p>Solicite agora o seu orçamento e dê o primeiro passo para um ambiente mais bonito, valorizado e com a qualidade que você merece.</p>
+            </section>
+            <a href="orcamento.html" class="cta-botao">Solicitar orçamento <span class="material-symbols-outlined">arrow_forward</span></a>
+        </section>
+    </main>
+
+   <footer>
+        <nav>
+            <img id="logo_cab" class="imagem-logo"
+                    src="img/Logo escrita branca Alfa & Ômega.png"
+                    alt="Logomarca Alfa & Omega Pinturas">
+                <section>
+                    <h3>Links rápidos:</h3>  
+                    <ul>
+                        <li><a id="menu_1" href="inicio.html">Início</a></li>
+                        <li><a id="menu_2" href="servicos.html">Serviços</a></li>
+                        <li><a id="menu_3" href="quemsomos.html">Quem Somos</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Entre em contato:</h3>
+                    <ul class="redes_sociais">
+                        <li>
+                            <a href="https://www.instagram.com/alfaeomegapinturass?utm_source=ig_web_button_share_sheet&mdxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="bi bi-instagram"></span></a>
+                        </li>
+
+                        <li>
+                            <a href="https://wa.me/55189968708?text=Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Alfa%20e%20%C3%94mega!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="bi bi-whatsapp"></span></a>
+                        </li>
+
+                        <li>
+                            <a href="tel:18996870839" aria-label="Telefone"><span class="bi bi-telephone"></span></a>
+                        </li>
+                    </ul>
+                </section>
+        </nav>
+        <p>
+            @2026 Projeto estudantil Alfa & Ômega pinturas. Todos os direitos reservados
+        </p>
+    </footer>
+    
+</body>
+</html>
