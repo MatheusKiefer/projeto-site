@@ -1,6 +1,4 @@
-
 /* BANNER PRINCIPAL */
-
 .banner-principal {
     position: relative;
     isolation: isolate;
@@ -16,7 +14,6 @@
     background-color: #ffffff;
     box-sizing: border-box;
 }
-
 .banner-imagem {
     position: absolute;
     inset: 0;
@@ -26,7 +23,6 @@
     z-index: -1;
     overflow: hidden;
 }
-
 .banner-imagem img {
     display: block;
     width: 100%;
@@ -34,7 +30,6 @@
     object-fit: cover;
     object-position: center center;
 }
-
 .banner-conteudo {
     position: relative;
     z-index: 2;
@@ -45,7 +40,6 @@
     background: transparent;
     box-sizing: border-box;
 }
-
 .banner-subtitulo {
     color: #0077b6;
     font-size: 20px;
@@ -55,7 +49,6 @@
     margin-bottom: 16px;
     text-align: left;
 }
-
 .banner-conteudo h1 {
     color: #091724;
     font-size: clamp(30px, 4vw, 56px);
@@ -63,13 +56,11 @@
     font-weight: 800;
     margin-bottom: 18px;
 }
-
 .banner-conteudo h1 span {
     display: block;
     color: #008bd2;
     font-size: inherit;
 }
-
 .banner-descricao {
     max-width: 550px;
     color: #3f4d58;
@@ -78,14 +69,12 @@
     margin-bottom: 30px;
     text-align: left;
 }
-
 .banner-botoes {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
     margin-bottom: 28px;
 }
-
 .banner-botoes a {
     display: inline-flex;
     align-items: center;
@@ -98,31 +87,26 @@
     font-weight: 700;
     transition: 0.25s ease;
 }
-
 .btn-primario {
     background-color: #0077b6;
     border: 2px solid #0077b6;
     color: white;
 }
-
 .btn-primario:hover {
     background-color: #005f91;
     border-color: #005f91;
     transform: translateY(-2px);
 }
-
 .btn-secundario {
     background-color: transparent;
     border: 2px solid #0077b6;
     color: #0077b6;
 }
-
 .btn-secundario:hover {
     background-color: #0077b6;
     color: white;
     transform: translateY(-2px);
 }
-
 .banner-diferenciais {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -132,20 +116,17 @@
     margin: 0;
     max-width: 420px;
 }
-
 .banner-diferenciais li {
     display: flex;
     align-items: center;
     gap: 12px;
     min-width: 0;
 }
-
 .banner-diferenciais .material-symbols-outlined {
     color: #008bd2;
     font-size: 28px;
     flex-shrink: 0;
 }
-
 .banner-diferenciais p {
     font-size: 14px;
     font-weight: 700;
@@ -175,42 +156,33 @@
         min-height: auto;
         padding: 35px 20px;
     }
-
     .banner-imagem {
         opacity: 0.18;
     }
-
     .banner-conteudo {
         width: 100%;
         max-width: none;
         padding: 10px 0;
     }
-
     .banner-conteudo h1 {
         font-size: 36px;
     }
-
     .banner-descricao {
         font-size: 16px;
     }
-
     .banner-botoes {
         flex-direction: column;
         align-items: stretch;
     }
-
     .banner-botoes a {
         width: 100%;
     }
-
     .banner-diferenciais {
         gap: 15px;
     }
 }
 
-
 /* EMPRESA E SERVIÇOS */
-
 .conheca-empresa {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -222,11 +194,9 @@
     padding: 35px 20px;
     background-color: white;
 }
-
 .empresa-apresentacao {
     min-width: 0;
 }
-
 .empresa-subtitulo {
     color: #0077b6;
     font-size: 13px;
@@ -235,7 +205,6 @@
     margin-bottom: 15px;
     text-align: left;
 }
-
 .empresa-apresentacao h2 {
     color: #091724;
     font-size: clamp(28px, 2.7vw, 42px);
@@ -243,12 +212,10 @@
     line-height: 1.15;
     margin-bottom: 25px;
 }
-
 .empresa-apresentacao h2 span {
     color: #0077b6;
     font-size: inherit;
 }
-
 .empresa-descricao {
     color: #3f4d58;
     font-size: 16px;
@@ -256,7 +223,6 @@
     text-align: left;
     margin-bottom: 35px;
 }
-
 .empresa-indicadores {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -264,20 +230,17 @@
     list-style: none;
     margin-bottom: 35px;
 }
-
 .empresa-indicadores li {
     display: flex;
     align-items: center;
     gap: 12px;
     min-width: 0;
 }
-
 .empresa-indicadores .material-symbols-outlined {
     color: #0077b6;
     font-size: 34px;
     flex-shrink: 0;
 }
-
 .empresa-indicadores p {
     display: flex;
     flex-direction: column;
@@ -285,12 +248,10 @@
     line-height: 1.4;
     text-align: left;
 }
-
 .empresa-indicadores strong {
     color: #091724;
     font-size: 21px;
 }
-
 .empresa-botao {
     display: inline-flex;
     align-items: center;
@@ -305,29 +266,24 @@
     text-decoration: none;
     transition: 0.3s ease;
 }
-
 .empresa-botao:hover {
     background: #005f91;
     transform: translateY(-2px);
 }
-
 .empresa-servicos {
     min-width: 0;
 }
-
 .empresa-servicos > h2 {
     color: #091724;
     font-size: clamp(24px, 2.2vw, 34px);
     font-weight: 800;
     margin-bottom: 25px;
 }
-
 .cards-servicos {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
-
 .card-servico {
     min-width: 0;
     overflow: hidden;
@@ -336,14 +292,12 @@
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-
 .servico-imagem {
     display: block;
     width: 100%;
     padding: 0;
     overflow: hidden;
 }
-
 .servico-imagem img {
     display: block;
     width: 100%;
@@ -351,28 +305,23 @@
     object-fit: cover;
     transition: transform 0.3s ease;
 }
-
 .card-servico:hover .servico-imagem img {
     transform: scale(1.05);
 }
-
 .card-conteudo {
     padding: 20px;
 }
-
 .card-conteudo h3 {
     color: #091724;
     font-size: 20px;
     margin-bottom: 12px;
 }
-
 .card-conteudo p {
     color: #3f4d58;
     font-size: 15px;
     line-height: 1.6;
     text-align: left;
 }
-
 .botao-todos-servicos {
     display: flex;
     align-items: center;
@@ -390,22 +339,19 @@
     text-decoration: none;
     transition: 0.3s ease;
 }
-
 .botao-todos-servicos:hover {
     background-color: #0077b6;
     color: white;
 }
-
-
-/* RESPONSIVIDADE EMPRESA E SERVIÇOS */
 
 @media (max-width: 950px) {
     .conheca-empresa {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-
-    .empresa-apresentacao,
+    .empresa-apresentacao {
+        width: 100%;
+    }
     .empresa-servicos {
         width: 100%;
     }
@@ -417,128 +363,72 @@
         padding: 25px 10px;
         margin: 35px auto;
     }
-
     .cards-servicos {
         grid-template-columns: 1fr;
     }
-
     .servico-imagem img {
         height: 230px;
     }
-
     .empresa-indicadores {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 18px 10px;
     }
-
     .empresa-indicadores .material-symbols-outlined {
         font-size: 27px;
     }
-
     .empresa-indicadores strong {
         font-size: 17px;
     }
-
     .empresa-indicadores p {
         font-size: 12px;
     }
-
     .empresa-botao,
     .botao-todos-servicos {
         width: 100%;
     }
 }
 
-
 /* PROJETOS REALIZADOS */
-/* CARROSSEL COM SWIPE PARA CELULARES E MOUSE */
-
 .projetos-realizados {
     width: 95%;
     max-width: 1500px;
     margin: 80px auto;
 }
-
 .projetos-realizados > h2 {
     color: #091724;
     font-size: clamp(28px, 3vw, 42px);
     margin-bottom: 30px;
 }
-
-/* Área visível do carrossel */
-
-.carrossel-projetos,
-#carrossel-projetos {
-    width: 100%;
+.carrossel-projetos {
     overflow: hidden;
-
-    /* Mantém a rolagem vertical da página */
+    width: 100%;
     touch-action: pan-y;
 }
-
-/* Faixa com as imagens */
-
 .carrossel-faixa {
     display: flex;
     gap: 20px;
     transition: transform 350ms ease;
     will-change: transform;
-
-    /* Controle dos gestos de toque */
-    touch-action: pan-y;
-
-    /* Impede seleção acidental */
-    user-select: none;
-    -webkit-user-select: none;
-
-    /* Indica que pode ser arrastado */
-    cursor: grab;
 }
-
-.carrossel-faixa:active {
-    cursor: grabbing;
-}
-
-/* Cards do carrossel */
-
 .projeto-card {
     flex: 0 0 calc((100% - 40px) / 3);
     min-width: 0;
     background: #f4f7fa;
     border-radius: 18px;
     overflow: hidden;
-
-    touch-action: pan-y;
-    user-select: none;
-    -webkit-user-select: none;
 }
-
-/* Imagens */
-
 .projeto-card img {
     display: block;
     width: 100%;
     height: 320px;
     object-fit: cover;
-
-    /* Impede o arrasto nativo da imagem */
-    -webkit-user-drag: none;
-    user-select: none;
-    -webkit-user-select: none;
-
-    /* Permite gestos horizontais */
-    touch-action: pan-y;
 }
-
-/* Botões do carrossel */
-
 .setas-projetos {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 25px;
 }
-
 .setas-projetos button {
     width: 45px;
     height: 45px;
@@ -549,14 +439,10 @@
     cursor: pointer;
     transition: 0.3s;
 }
-
 .setas-projetos button:hover {
     background: #0077b6;
     color: white;
 }
-
-
-/* RESPONSIVIDADE DO CARROSSEL */
 
 @media (max-width: 900px) {
     .projeto-card {
@@ -568,34 +454,28 @@
     .projeto-card {
         flex-basis: 100%;
     }
-
     .projeto-card img {
         height: 260px;
     }
 }
 
-
 /* PERGUNTAS FREQUENTES */
-
 .faq {
     width: 90%;
     max-width: 1000px;
     margin: 80px auto;
 }
-
 .faq-subtitulo {
     color: #0077b6;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
 }
-
 .faq h2 {
     color: #091724;
     font-size: clamp(28px, 3vw, 42px);
     margin: 10px 0 30px;
 }
-
 .faq details {
     margin-bottom: 12px;
     padding: 20px;
@@ -603,7 +483,6 @@
     border-radius: 12px;
     background: #f8fafc;
 }
-
 .faq summary {
     display: flex;
     align-items: center;
@@ -615,22 +494,18 @@
     cursor: pointer;
     list-style: none;
 }
-
 .faq summary::-webkit-details-marker {
     display: none;
 }
-
 .faq summary::after {
     content: "+";
     color: #0077b6;
     font-size: 25px;
     flex-shrink: 0;
 }
-
 .faq details[open] summary::after {
     content: "−";
 }
-
 .faq details p {
     color: #3f4d58;
     font-size: 15px;
@@ -643,23 +518,18 @@
         width: 95%;
         margin: 50px auto;
     }
-
     .faq details {
         padding: 15px;
     }
-
     .faq summary {
         font-size: 15px;
     }
-
     .faq details p {
         font-size: 14px;
     }
 }
 
-
 /* DIFERENCIAIS */
-
 .diferenciais {
     width: 95%;
     max-width: 1300px;
@@ -676,7 +546,6 @@
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0, 119, 182, 0.18);
 }
-
 .diferenciais-subtitulo {
     color: #9fd8ff;
     font-size: 13px;
@@ -685,14 +554,12 @@
     margin-bottom: 10px;
     text-align: left;
 }
-
 .diferenciais h2 {
     font-size: clamp(28px, 3vw, 42px);
     line-height: 1.2;
     margin-bottom: 35px;
     color: white;
 }
-
 .diferenciais-lista {
     list-style: none;
     display: grid;
@@ -701,7 +568,6 @@
     margin: 0;
     padding: 0;
 }
-
 .diferenciais-lista li {
     min-width: 0;
     overflow: hidden;
@@ -711,20 +577,17 @@
     padding: 20px 16px;
     backdrop-filter: blur(4px);
 }
-
 .diferenciais-lista span {
     font-size: 34px;
     color: #7fd3ff;
     margin-bottom: 12px;
     display: inline-block;
 }
-
 .diferenciais-lista h3 {
     font-size: 18px;
     margin-bottom: 8px;
     color: white;
 }
-
 .diferenciais-lista p {
     font-size: 14px;
     line-height: 1.5;
@@ -742,7 +605,6 @@
     .diferenciais {
         padding: 35px 20px;
     }
-
     .diferenciais-lista {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -752,15 +614,12 @@
     .diferenciais-lista {
         grid-template-columns: 1fr;
     }
-
     .diferenciais h2 {
         margin-bottom: 25px;
     }
 }
 
-
 /* CHAMADA FINAL */
-
 .cta-final {
     width: 100%;
     max-width: 100%;
@@ -779,7 +638,6 @@
     color: white;
     box-sizing: border-box;
 }
-
 .cta-icone {
     overflow: hidden;
     display: grid;
@@ -792,7 +650,6 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.12);
 }
-
 .cta-icone .material-symbols-outlined {
     position: static;
     display: block;
@@ -802,20 +659,17 @@
     line-height: 1;
     color: white;
 }
-
 .cta-texto h2 {
     font-size: clamp(28px, 3vw, 40px);
     margin-bottom: 8px;
     color: white;
 }
-
 .cta-texto p {
     font-size: 16px;
     line-height: 1.6;
     color: #e7f3fb;
     text-align: left;
 }
-
 .cta-botao {
     display: inline-flex;
     align-items: center;
@@ -830,12 +684,10 @@
     white-space: nowrap;
     transition: 0.3s ease;
 }
-
 .cta-botao:hover {
     background: #eaf6ff;
     transform: translateY(-2px);
 }
-
 @media (max-width: 900px) {
     .cta-final {
         grid-template-columns: 1fr;
@@ -843,7 +695,6 @@
         justify-items: center;
         padding: 30px 20px;
     }
-
     .cta-texto p {
         text-align: center;
     }
@@ -856,32 +707,27 @@
         height: 65px;
         font-size: 32px;
     }
-
     .cta-botao {
         width: 100%;
         max-width: 320px;
     }
 }
 
-
 /* AJUSTES RESPONSIVOS DA HOME */
 
 .pagina-inicio .cabecalho {
     width: auto;
 }
-
 @media (max-width: 850px) {
     .pagina-inicio .cabecalho {
         display: grid;
         grid-template-columns: 1fr auto;
     }
-
     .pagina-inicio .botao_mobile {
         display: block;
         position: relative;
         z-index: 11000;
     }
-
     .pagina-inicio .menu {
         position: fixed;
         top: 0;
@@ -897,30 +743,25 @@
         flex-direction: column;
         align-items: stretch;
     }
-
     .pagina-inicio .menu.aberto {
         right: 0;
     }
-
     .pagina-inicio .menu ul {
         display: flex;
         flex-direction: column;
         gap: 15px;
         margin: 0;
     }
-
     .pagina-inicio .menu li {
         width: 100%;
         color: white;
     }
-
     .pagina-inicio .menu li a {
         display: block;
         color: white;
         font-size: 18px;
         padding: 12px;
     }
-
     .pagina-inicio .menu .botao-orcamento {
         display: flex;
         width: 100%;
@@ -930,11 +771,9 @@
         background: transparent;
         font-size: 17px;
     }
-
     .pagina-inicio .menu .botao-orcamento span {
         display: none;
     }
-
     .pagina-inicio .cabecalho .imagem-logo {
         display: block;
     }
@@ -944,26 +783,21 @@
     .pagina-inicio footer {
         flex-direction: column;
     }
-
     .pagina-inicio footer nav {
         flex-wrap: wrap;
         gap: 20px;
     }
-
     .pagina-inicio footer h3 {
         display: block;
         font-size: 16px;
     }
-
     .pagina-inicio footer ul {
         display: block;
     }
-
     .pagina-inicio footer .imagem-logo {
         display: block;
         width: min(180px, 100%);
     }
-
     .pagina-inicio footer .redes_sociais {
         display: flex;
         margin-top: 12px;
@@ -974,30 +808,22 @@
     .banner-principal {
         padding: 25px 12px;
     }
-
     .banner-subtitulo {
         font-size: 15px;
     }
-
     .banner-conteudo h1 {
         font-size: 30px;
     }
-
     .banner-diferenciais {
         grid-template-columns: 1fr;
     }
-
     .empresa-indicadores {
         grid-template-columns: 1fr;
     }
-
     .cta-botao {
         white-space: normal;
     }
 }
-
-
-/* ACESSIBILIDADE */
 
 @media (prefers-reduced-motion: reduce) {
     .carrossel-faixa {
@@ -1005,44 +831,13 @@
     }
 }
 
-
-/* AJUSTES FINAIS PARA CELULARES */
-
 @media (max-width: 600px) {
     .cta-final {
         grid-template-columns: minmax(0, 1fr);
     }
-
     .cta-texto,
     .cta-botao {
         min-width: 0;
         max-width: 100%;
     }
-}
-
-
-/* CONTROLE DE TOQUE DO CARROSSEL */
-/* Compatibilidade com o JavaScript atualizado */
-
-#carrossel-projetos,
-#carrossel-projetos .carrossel-faixa,
-#carrossel-projetos .projeto-card,
-#carrossel-projetos .projeto-card img {
-    touch-action: pan-y;
-}
-
-#carrossel-projetos .carrossel-faixa {
-    user-select: none;
-    -webkit-user-select: none;
-    cursor: grab;
-}
-
-#carrossel-projetos .carrossel-faixa:active {
-    cursor: grabbing;
-}
-
-#carrossel-projetos .projeto-card img {
-    -webkit-user-drag: none;
-    user-select: none;
-    -webkit-user-select: none;
 }
