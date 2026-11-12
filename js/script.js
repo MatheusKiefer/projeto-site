@@ -13,7 +13,7 @@
         let paginaAtual =window.location.pathname
         
     
-        if(paginaAtual.includes("index.html") || paginaAtual==="/")
+        if(paginaAtual.includes("inicio.html") || paginaAtual==="/")
             {
                 document.getElementById("menu_1").classList.add("ativo")
             }
