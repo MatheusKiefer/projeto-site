@@ -1,519 +1,682 @@
+
+/* BANNER PRINCIPAL */
 .banner-principal 
 {
-    position: relative;
-    isolation: isolate;
-    width: 95%;
-    max-width: 1500px;
+    position: relative; 
+    isolation: isolate; 
+    width: 95%; 
+    max-width: 1500px; 
     min-height: 600px;
-    margin: 30px auto 60px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: #ffffff;
+    margin: 30px auto 60px; 
+    padding: 0; display: 
+    flex; align-items: 
+    center; border-radius: 20px;
+    overflow: hidden; 
+    background-color: #ffffff; 
     box-sizing: border-box;
 }
-
 .banner-imagem 
 {
-    position: absolute;
-    inset: 0;
-    width: 100%;
+    position: absolute; 
+    inset: 0; 
+    width: 100%; 
     height: 100%;
-    margin: 0;
-    z-index: -1;
+    margin: 0; 
+    z-index: -1; 
     overflow: hidden;
 }
-
 .banner-imagem img 
 {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
     object-position: center center;
 }
-
 .banner-conteudo 
 {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    z-index: 2;
-    width: 53%;
-    max-width: 730px;
-    padding: 50px 0 50px 5%;
+    position: relative; 
+    z-index: 2; width: 53%; 
+    max-width: 730px; 
+    padding: 50px 0 50px 5%; 
     margin: 0;
-    background: transparent;
+    background: transparent; 
     box-sizing: border-box;
 }
-
 .banner-subtitulo 
 {
-    color: #0077b6;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    color: #0077b6; 
+    font-size: 20px; 
+    font-weight: 700; 
+    letter-spacing: 1px; 
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 16px; 
     text-align: left;
 }
-
 .banner-conteudo h1 
 {
-    color: #091724;
-    font-size: clamp(30px, 4vw, 56px);
-    line-height: 1.05;
-    font-weight: 800;
+    color: #091724; 
+    font-size: clamp(30px, 4vw, 56px); 
+    line-height: 1.05; 
+    font-weight: 800; 
     margin-bottom: 18px;
 }
-
 .banner-conteudo h1 span 
-{
-    display: block;
-    color: #008bd2;
-    font-size: inherit;
+{ 
+    display: block; 
+    color: #008bd2; 
+    font-size: inherit; 
 }
-
 .banner-descricao 
 {
-    max-width: 550px;
-    color: #3f4d58;
-    font-size: 20px;
-    line-height: 1.5;
+    max-width: 550px; 
+    color: #3f4d58; 
+    font-size: 20px; 
+    line-height: 1.5; 
     margin-bottom: 30px;
     text-align: left;
 }
-
 .banner-botoes 
-{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-bottom: 28px;
+{ 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 14px; 
+    margin-bottom: 28px; 
 }
-
 .banner-botoes a 
 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; gap: 8px; 
     padding: 12px 22px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
+    border-radius: 999px; 
+    text-decoration: none; 
+    font-size: 15px; 
+    font-weight: 700; 
     transition: 0.25s ease;
 }
-
 .btn-primario 
-{
-    background-color: #0077b6;
-    border: 2px solid #0077b6;
-    color: white;
+{ 
+    background-color: #0077b6; 
+    border: 2px solid #0077b6; 
+    color: white; 
 }
-
 .btn-primario:hover 
 {
-    background-color: #005f91;
-    border-color: #005f91;
+    background-color: #005f91; 
+    border-color: #005f91; 
     transform: translateY(-2px);
 }
-
 .btn-secundario 
-{
-    background-color: transparent;
-    border: 2px solid #0077b6;
-    color: #0077b6;
+{ 
+    background-color: transparent; 
+    border: 2px solid #0077b6; 
+    color: #0077b6; 
 }
-
 .btn-secundario:hover 
-{
-    background-color: #0077b6;
-    color: white;
-    transform: translateY(-2px);
+{ 
+    background-color: #0077b6; 
+    color: white; 
+    transform: translateY(-2px); 
 }
-
 .banner-diferenciais 
 {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px 18px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 16px 18px; list-style: none;
+    padding: 0; 
+    margin: 0; 
     max-width: 420px;
 }
-
 .banner-diferenciais li 
-{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 0;
+{ 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    min-width: 0; 
 }
-
 .banner-diferenciais .material-symbols-outlined 
 {
-    color: #008bd2;
-    font-size: 28px;
+    color: #008bd2; 
+    font-size: 28px; 
     flex-shrink: 0;
 }
-
 .banner-diferenciais p 
 {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.4;
-    color: #091724;
+    font-size: 14px; 
+    font-weight: 700; 
+    line-height: 1.4; 
+    color: #091724; 
     text-align: left;
 }
- 
 
 @media (max-width: 950px) 
 {
-
-    .banner-principal 
-    {
-        min-height: 560px;
-    }
-    .banner-conteudo 
-    {
-        width: 65%;
-        padding-left: 5%;
-    }
-    .banner-conteudo h1 
-    {
-        font-size: 42px;
-    }
+    .banner-principal{ min-height: 560px; }
+    .banner-conteudo { width: 65%; padding-left: 5%; }
+    .banner-conteudo h1 { font-size: 42px; }
 }
 
 @media (max-width: 900px) 
 {
-    .banner-principal 
-    {
-        width: 95%;
-        min-height: auto;
-        padding: 35px 20px;
-    }
-
-    .banner-imagem
-    {
-        opacity: 0.18;
-    }
-    .banner-conteudo 
-    {
-        width: 100%;
-        max-width: none;
-        padding: 10px 0;
-    }
-    .banner-conteudo h1 
-    {
-        font-size: 36px;
-    }
-    .banner-descricao 
-    {
-        font-size: 16px;
-    }
-    .banner-botoes 
-    {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .banner-botoes a 
-    {
-        width: 100%;
-    }
-
-    .banner-diferenciais 
-    {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px;
-    }
+    .banner-principal { width: 95%; min-height: auto; padding: 35px 20px; }
+    .banner-imagem { opacity: 0.18; }
+    .banner-conteudo { width: 100%; max-width: none; padding: 10px 0; }
+    .banner-conteudo h1 { font-size: 36px; }
+    .banner-descricao { font-size: 16px; }
+    .banner-botoes { flex-direction: column; align-items: stretch; }
+    .banner-botoes a { width: 100%; }
+    .banner-diferenciais { gap: 15px; }
 }
 
+/* EMPRESA E SERVIÇOS */
 .conheca-empresa 
 {
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    align-items: start;
-    gap: 45px;
+    display: grid; 
+    grid-template-columns: 1fr 1.3fr; 
+    align-items: start; gap: 45px; 
     width: 95%;
-    max-width: 1500px;
-    margin: 60px auto;
-    padding: 35px 20px;
+    max-width: 1500px; 
+    margin: 60px auto; 
+    padding: 35px 20px; 
     background-color: white;
 }
-
 .empresa-apresentacao 
-{
-    min-width: 0;
+{ 
+    min-width: 0; 
 }
-
 .empresa-subtitulo 
 {
-    color: #0077b6;
+    color: #0077b6; 
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 15px;
     text-align: left;
 }
-
 .empresa-apresentacao h2 
 {
-    color: #091724;
-    font-size: clamp(28px, 2.7vw, 42px);
-    font-weight: 800;
+    color: #091724; 
+    font-size: 
+    clamp(28px, 2.7vw, 42px); 
+    font-weight: 800; 
     line-height: 1.15;
     margin-bottom: 25px;
 }
-
 .empresa-apresentacao h2 span 
-{
-    color: #0077b6;
-    font-size: inherit;
+{ 
+    color: #0077b6; 
+    font-size: inherit; 
 }
-
 .empresa-descricao 
 {
-    color: #3f4d58;
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: left;
+    color: #3f4d58; 
+    font-size: 16px; 
+    line-height: 1.7; 
+    text-align: left; 
     margin-bottom: 35px;
 }
-
 .empresa-indicadores 
 {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px 15px;
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 25px 15px; 
     list-style: none;
     margin-bottom: 35px;
 }
-
 .empresa-indicadores li 
-{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 0;
+{ 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    min-width: 0; 
 }
-
 .empresa-indicadores .material-symbols-outlined 
 {
-    color: #0077b6;
+    color: #0077b6; 
     font-size: 34px;
     flex-shrink: 0;
 }
-
 .empresa-indicadores p 
 {
-    display: flex;
+    display: flex; 
     flex-direction: column;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 14px; 
+    line-height: 1.4; 
     text-align: left;
 }
-
 .empresa-indicadores strong 
-{
-    color: #091724;
-    font-size: 21px;
+{ 
+    color: #091724; 
+    font-size: 21px; 
 }
-
 .empresa-botao 
 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 12px; 
     padding: 13px 25px;
-    background: #0077b6;
-    color: white;
-    border-radius: 999px;
-    font-size: 15px;
+    background: #0077b6; 
+    color: white; 
+    border-radius: 999px; 
+    font-size: 15px; 
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: none; 
     transition: 0.3s ease;
 }
-
 .empresa-botao:hover 
-{
-    background: #005f91;
-    transform: translateY(-2px);
+{ 
+    background: #005f91; 
+    transform: translateY(-2px); 
 }
-
 .empresa-servicos 
-{
-    min-width: 0;
+{ 
+    min-width: 0; 
 }
-
 .empresa-servicos > h2 
 {
     color: #091724;
-    font-size: clamp(24px, 2.2vw, 34px);
+    font-size: clamp(24px, 2.2vw, 34px); 
     font-weight: 800;
     margin-bottom: 25px;
 }
-
 .cards-servicos 
-{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+{ 
+    display: grid; 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 20px; 
 }
-
 .card-servico 
 {
-    min-width: 0;
-    overflow: hidden;
-    background-color: white;
-    border: 1px solid #e2e8f0;
+    min-width: 0; 
+    overflow: hidden; 
+    background-color: white; 
+    border: 1px solid #e2e8f0; 
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-
-
-.abrir-servico 
-{
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    overflow: hidden;
+.servico-imagem 
+{ 
+    display: block; 
+    width: 100%; 
+    padding: 0; 
+    overflow: hidden; 
 }
-
-.abrir-servico img 
+.servico-imagem img 
 {
-    display: block;
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
+    display: block; 
+    width: 100%; 
+    height: 240px; 
+    object-fit: cover; 
     transition: transform 0.3s ease;
 }
-
-.abrir-servico:hover img 
-{
-    transform: scale(1.05);
+.card-servico:hover .servico-imagem img 
+{ 
+    transform: scale(1.05); 
 }
-
 .card-conteudo 
-{
-    padding: 20px;
+{ 
+    padding: 20px; 
 }
-
 .card-conteudo h3 
-{
-    color: #091724;
-    font-size: 20px;
-    margin-bottom: 12px;
+{ 
+    color: #091724; 
+    font-size: 20px; 
+    margin-bottom: 12px; 
 }
-
 .card-conteudo p 
-{
-    color: #3f4d58;
-    font-size: 15px;
-    line-height: 1.6;
-    text-align: left;
+{ 
+    color: #3f4d58; 
+    font-size: 15px; 
+    line-height: 1.6; 
+    text-align: left; 
 }
-
 .botao-todos-servicos 
 {
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     justify-content: center;
     gap: 10px;
     width: fit-content;
-    margin: 30px auto 0;
-    padding: 13px 25px;
-    color: #0077b6;
-    background-color: white;
+    margin: 30px auto 0; 
+    padding: 13px 25px; 
+    color: #0077b6; 
+    background-color: white; 
     border: 2px solid #0077b6;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
+    border-radius: 999px; 
+    font-size: 15px; 
+    font-weight: 700; 
+    text-decoration: none; 
     transition: 0.3s ease;
 }
-
 .botao-todos-servicos:hover 
-{
-    background-color: #0077b6;
-    color: white;
+{ 
+    background-color: #0077b6; 
+    color: white; 
 }
 
 @media (max-width: 950px) 
 {
-
-    .conheca-empresa 
-    {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .empresa-apresentacao 
-    {
-        width: 100%;
-    }
-
-    .empresa-servicos 
-    {
-        width: 100%;
-    }
-
+    .conheca-empresa { grid-template-columns: 1fr; gap: 40px; }
+    .empresa-apresentacao { width: 100%; }
+    .empresa-servicos { width: 100%; }
 }
 
 @media (max-width: 600px) 
 {
-    .conheca-empresa 
-    {
-        width: 95%;
-        padding: 25px 10px;
-        margin: 35px auto;
-    }
+    .conheca-empresa { width: 95%; padding: 25px 10px; margin: 35px auto; }
+    .cards-servicos { grid-template-columns: 1fr; }
+    .servico-imagem img { height: 230px; }
+    .empresa-indicadores { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 10px; }
+    .empresa-indicadores .material-symbols-outlined { font-size: 27px; }
+    .empresa-indicadores strong { font-size: 17px; }
+    .empresa-indicadores p { font-size: 12px; }
+    .empresa-botao,
+    .botao-todos-servicos { width: 100%; }
+}
 
-    .cards-servicos 
-    {
-        grid-template-columns: 1fr;
-    }
+/* PROJETOS REALIZADOS */
+.projetos-realizados 
+{ 
+    width: 95%; 
+    max-width: 1500px; 
+    margin: 80px auto; 
+}
+.projetos-realizados > h2 
+{
+    color: #091724; 
+    font-size: clamp(28px, 3vw, 42px);
+    margin-bottom: 30px;
+}
+.carrossel-projetos 
+{ 
+    overflow: hidden; 
+    width: 100%; touch-action: pan-y; 
+}
+.carrossel-faixa 
+{
+    display: flex; 
+    gap: 20px; transition: transform 350ms ease; 
+    will-change: transform;
+}
+.projeto-card 
+{
+    flex: 0 0 calc((100% - 40px) / 3); 
+    min-width: 0; background: #f4f7fa; 
+    border-radius: 18px; overflow: hidden;
+}
+.projeto-card img 
+{ 
+    display: block; width: 100%; 
+    height: 320px; object-fit: cover; 
+}
+.setas-projetos 
+{ 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; margin-top: 25px; 
+}
+.setas-projetos button 
+{
+    width: 45px; 
+    height: 45px; 
+    border: 1px solid #0077b6; 
+    border-radius: 50%; 
+    background: white; 
+    color: #0077b6;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+.setas-projetos button:hover 
+{ 
+    background: #0077b6; 
+    color: white; 
+}
 
-    .abrir-servico img 
-    {
-        height: 230px;
-    }
+@media (max-width: 900px) 
+{
+    .projeto-card { flex-basis: calc((100% - 20px) / 2); }
+}
 
-    .empresa-indicadores 
-    {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px 10px;
-    }
+@media (max-width: 600px)
+{
+    .projeto-card { flex-basis: 100%; }
+    .projeto-card img { height: 260px; }
+}
 
-    .empresa-indicadores .material-symbols-outlined 
-    {
-        font-size: 27px;
-    }
+/* PERGUNTAS FREQUENTES */
 
-    .empresa-indicadores strong 
+.faq { width: 90%; max-width: 1000px; margin: 80px auto; }
+.faq-subtitulo { color: #0077b6; font-size: 13px; font-weight: bold; letter-spacing: 2px; }
+.faq h2 { color: #091724; font-size: clamp(28px, 3vw, 42px); margin: 10px 0 30px; }
+.faq details {
+    margin-bottom: 12px; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8fafc;
+}
+.faq summary {
+    display: flex; align-items: center; justify-content: space-between; gap: 15px; color: #091724;
+    font-size: 17px; font-weight: bold; cursor: pointer; list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: #0077b6; font-size: 25px; flex-shrink: 0; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { color: #3f4d58; font-size: 15px; line-height: 1.7; margin-top: 15px; }
+
+@media (max-width: 600px) {
+    .faq { width: 95%; margin: 50px auto; }
+    .faq details { padding: 15px; }
+    .faq summary { font-size: 15px; }
+    .faq details p { font-size: 14px; }
+}
+
+/* DIFERENCIAIS */
+.diferenciais 
+{
+    width: 95%; 
+    max-width: 1300px; 
+    margin: 70px auto; 
+    padding: 45px 30px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #091724 0%, #0d2a42 45%, #0077b6 100%); color: white;
+    box-sizing: border-box; box-shadow: 0 20px 50px rgba(0, 119, 182, 0.18);
+}
+.diferenciais-subtitulo 
+{
+    color: #9fd8ff; 
+    font-size: 13px; font-weight: 700; 
+    letter-spacing: 2px; 
+    margin-bottom: 10px;
+    text-align: left;
+}
+.diferenciais h2 
+{
+    font-size: clamp(28px, 3vw, 42px); 
+    line-height: 1.2; 
+    margin-bottom: 35px; 
+    color: white;
+}
+.diferenciais-lista 
+{
+    list-style: none; 
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 18px; margin: 0; 
+    padding: 0;
+}
+.diferenciais-lista li 
+{
+    min-width: 0; 
+    overflow: hidden; 
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12); 
+    border-radius: 16px; 
+    padding: 20px 16px;
+    backdrop-filter: blur(4px);
+}
+.diferenciais-lista span 
+{
+    font-size: 34px; 
+    color: #7fd3ff; 
+    margin-bottom: 12px; 
+    display: inline-block;
+}
+.diferenciais-lista h3 
+{ 
+    font-size: 18px; 
+    margin-bottom: 8px; 
+    color: white; 
+}
+.diferenciais-lista p 
+{ 
+    font-size: 14px; 
+    line-height: 1.5;
+    color: #dbe9f4; 
+    text-align: left; 
+}
+
+@media (max-width: 1100px) 
+{
+    .diferenciais-lista { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) 
+{
+    .diferenciais { padding: 35px 20px; }
+    .diferenciais-lista { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) 
+{
+    .diferenciais-lista { grid-template-columns: 1fr; }
+    .diferenciais h2 { margin-bottom: 25px; }
+}
+
+/* CHAMADA FINAL */
+.cta-final 
+{
+    width: 100%; 
+    max-width: 100%; 
+    margin: 70px 0 0; 
+    padding: 28px 40px; 
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center; 
+    gap: 25px;
+    background: linear-gradient(90deg, #091724 0%, #0b3d66 45%, #0077b6 100%); color: white;
+    box-sizing: border-box;
+}
+.cta-icone 
+{
+    overflow: hidden; 
+    display: grid; 
+    place-items: center; 
+    width: 78px; height: 78px; 
+    flex-shrink: 0; 
+    margin: 0;
+    padding: 0; 
+    border-radius: 50%; background: rgba(255, 255, 255, 0.12);
+}
+.cta-icone .material-symbols-outlined 
+{
+    position: static; 
+    display: block; 
+    margin: 0; 
+    padding: 0; 
+    font-size: 38px; 
+    line-height: 1; 
+    color: white;
+}
+.cta-texto h2 { font-size: clamp(28px, 3vw, 40px); margin-bottom: 8px; color: white; }
+.cta-texto p { font-size: 16px; line-height: 1.6; color: #e7f3fb; text-align: left; }
+.cta-botao 
+{
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 14px 26px;
+    border-radius: 999px; 
+    background: white; 
+    color: #0077b6; 
+    font-weight: 700; 
+    text-decoration: none;
+    white-space: nowrap; transition: 0.3s ease;
+}
+.cta-botao:hover { background: #eaf6ff; transform: translateY(-2px); }
+
+@media (max-width: 900px) {
+    .cta-final { grid-template-columns: 1fr; text-align: center; justify-items: center; padding: 30px 20px; }
+    .cta-texto p { text-align: center; }
+}
+
+@media (max-width: 600px) 
+{
+    .cta-icone { overflow: hidden; width: 65px; height: 65px; font-size: 32px; }
+    .cta-botao { width: 100%; max-width: 320px; }
+}
+
+/* AJUSTES RESPONSIVOS DA HOME */
+
+.pagina-inicio .cabecalho { width: auto; }
+
+@media (max-width: 850px) {
+    .pagina-inicio .cabecalho { display: grid; grid-template-columns: 1fr auto; }
+    .pagina-inicio .botao_mobile { display: block; position: relative; z-index: 11000; }
+    .pagina-inicio .menu 
     {
+        position: fixed; 
+        top: 0; right: -100%; 
+        width: min(80vw, 330px); 
+        height: 100dvh;
+        padding: 100px 15px 20px; 
+        z-index: 1000; background: #005f91; 
+        border-radius: 10px;
+        transition: right .3s ease; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: stretch;
+    }
+    .pagina-inicio .menu.aberto { right: 0; }
+    .pagina-inicio .menu ul { display: flex; flex-direction: column; gap: 15px; margin: 0; }
+    .pagina-inicio .menu li { width: 100%; color: white; }
+    .pagina-inicio .menu li a { display: block; color: white; font-size: 18px; padding: 12px; }
+    .pagina-inicio .menu .botao-orcamento 
+    {
+        display: flex; 
+        width: 100%; 
+        max-width: 100%; 
+        margin-top: 15px;
+        padding: 10px 15px;
+        background: transparent; 
         font-size: 17px;
     }
+    .pagina-inicio .menu .botao-orcamento span { display: none; }
+    .pagina-inicio .cabecalho .imagem-logo { display: block; }
+}
 
-    .empresa-indicadores p 
-    {
-        font-size: 12px;
-    }
+@media (max-width: 730px) {
+    .pagina-inicio footer { flex-direction: column; }
+    .pagina-inicio footer nav { flex-wrap: wrap; gap: 20px; }
+    .pagina-inicio footer h3 { display: block; font-size: 16px; }
+    .pagina-inicio footer ul { display: block; }
+    .pagina-inicio footer .imagem-logo { display: block; width: min(180px, 100%); }
+    .pagina-inicio footer .redes_sociais { display: flex; margin-top: 12px; }
+}
 
-    .empresa-botao,
-    .botao-todos-servicos 
-    {
-        width: 100%;
-    }
+@media (max-width: 380px) {
+    .banner-principal { padding: 25px 12px; }
+    .banner-subtitulo { font-size: 15px; }
+    .banner-conteudo h1 { font-size: 30px; }
+    .banner-diferenciais { grid-template-columns: 1fr; }
+    .empresa-indicadores { grid-template-columns: 1fr; }
+    .cta-botao { white-space: normal; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carrossel-faixa { transition-duration: 0.01ms; }
+}
+
+@media (max-width: 600px) {
+    .cta-final { grid-template-columns: minmax(0, 1fr); }
+    .cta-texto, .cta-botao { min-width: 0; max-width: 100%; }
 }
