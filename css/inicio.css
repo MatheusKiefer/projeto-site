@@ -779,31 +779,6 @@
     }
 }
 
-@media (max-width: 730px) {
-    .pagina-inicio footer {
-        flex-direction: column;
-    }
-    .pagina-inicio footer nav {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .pagina-inicio footer h3 {
-        display: block;
-        font-size: 16px;
-    }
-    .pagina-inicio footer ul {
-        display: block;
-    }
-    .pagina-inicio footer .imagem-logo {
-        display: block;
-        width: min(180px, 100%);
-    }
-    .pagina-inicio footer .redes_sociais {
-        display: flex;
-        margin-top: 12px;
-    }
-}
-
 @media (max-width: 380px) {
     .banner-principal {
         padding: 25px 12px;
