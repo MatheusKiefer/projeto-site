@@ -62,107 +62,161 @@
         </section>
 
         
-
+        <section class="aviso">
             <aside id="aviso-prazos">
 
-            <h3>Sobre os orçamentos dos serviços</h3>
+                <h3>Sobre os orçamentos dos serviços</h3>
 
-            <p>
-                Nesta área recolehemos seus dados para fazer uma análise e um pré-orçamento, o orçamento definitivo, assim como os prazos só podem ser efetivamente confirmados após uma visita da equipe no local.
-            </p>
+                <p>
+                    Nesta área recolehemos seus dados para fazer uma análise e um pré-orçamento, o orçamento definitivo, assim como os prazos só podem ser efetivamente confirmados após uma visita da equipe no local.
+                </p>
 
-        </aside>
+            </aside>
 
-        <section class="dados_1"></section>
+        </section>
 
-                <h1>Conte-nos como será o seu projeto:</h1>
+
+        <section class="formulario">
+
+            <h1>Conte-nos como será o seu projeto:</h1>
+
             <form>
-                <section class="dados de contato">
-                <label for="nome">Digite seu nome completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
 
-                <label for="email">Informe seu email:</label>
-                <input type="email" id="email" name="email" placeholder="nome@mail.com" required>
+                <section class="dados-contato">
 
-                <label for="whatsapp">Informe um whatsapp para contato:</label>
-                <input type="text" id="whatsapp" name="whatsapp" placeholder="ex: (48) 9****-****" minlength="10" required>
+                    <h2>Dados para contato</h2>
 
-                <label for="data_inicio">Data em que tem disponibilidade para começar o projeto:</label>
+                    <label for="nome">Digite seu nome completo:</label>
+                    <input type="text" id="nome" name="nome"
+                        placeholder="Digite seu nome aqui" required>
+
+                    <label for="email">Informe seu email:</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="nome@mail.com" required>
+
+                    <label for="whatsapp">Informe um WhatsApp para contato:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp"
+                        placeholder="Ex.: (48) 99999-9999"
+                        minlength="10" required>
 
                 </section>
 
-                <label for="endereco">Endereço para o serviço:</label>
-                <input type="text"
-                    id="endereco"
-                    name="endereco"
-                    placeholder="Rua, número e bairro"
-                    autocomplete="street-address"
-                    required>
+                    <section class="dados-projeto">
 
-                <p>Informe se o serviço será em área externa ou interna:</p>
-                    <input type="radio" id="interno" name="area" value="Interno">
+                            <h2>Informações sobre o projeto</h2>
 
-                    <label for="interno">Interna</label>
+                            <label for="data_inicio">
+                                Data em que tem disponibilidade para começar o projeto:
+                            </label>
+                            <input type="date" id="data_inicio" name="data_inicio">
 
-                    <input type="radio" id="externo" name="area" value="Externo">
-                    <label for="externo">Externa</label>
+                            <label for="endereco">Endereço para o serviço:</label>
+                            <input type="text" id="endereco" name="endereco"
+                                placeholder="Rua, número e bairro"
+                                autocomplete="street-address" required>
 
-                    <input type="radio" id="ambos" name="area" value="ambos">
-                    <label for="ambos">Ambas</label>
+                            <fieldset>
 
-                <p>Marque qual servico você pretende realizar:</p>
-                    <input type="checkbox" id="pintura-residencial" name="pintura-residencial">
+                                <legend>O serviço será em área externa ou interna?</legend>
 
-                    <input type="checkbox" id="Pintura Comercial" name="Pintura Comercial">
+                                <label for="interno">
+                                    <input type="radio" id="interno" name="area"
+                                        value="Interno">
+                                    Interna
+                                </label>
 
-                    <input type="checkbox" id="impermeabilizacao" name="impermeabilizacao">
+                                <label for="externo">
+                                    <input type="radio" id="externo" name="area"
+                                        value="Externo">
+                                    Externa
+                                </label>
 
-                    <input type="checkbox" id="texturas" name="texturas">
-                    <label for="texturas">Texturas e efeitos</label>
-                    <label for="repintura">Repintura e renovação</label>
-                    <input type="checkbox" id="repintura" name="repintura">
+                                <label for="ambos">
+                                    <input type="radio" id="ambos" name="area"
+                                        value="Ambos">
+                                    Ambas
+                                </label>
 
-                    <label for="descricao">Descreva brevemente o serviço que precisa ser feito</label>
-                    <textarea
-                        id="descricao"
-                        name="descricao"
-                        placeholder="Descreva o serviço que você precisa..."
-                        rows="6"
-                        required
-                    ></textarea>
+                            </fieldset>
 
-                    <label for="fotos">Adicione fotos do local:</label>
-                    <input
-                        type="file"
-                        id="fotos"
-                        name="fotos"
-                        accept="image/*"
-                        multiple
-                    >
+                            <fieldset>
+                                <legend>Marque quais serviços você pretende realizar:</legend>
 
-                    <button type="submit">Enviar</button>
+                                <label for="pintura-residencial">
+                                    <input type="checkbox" id="pintura-residencial"
+                                        name="pintura-residencial">
+                                    Pintura residencial
+                                </label>
+
+                                <label for="pintura-comercial">
+                                    <input type="checkbox" id="pintura-comercial"
+                                        name="pintura-comercial">
+                                    Pintura comercial
+                                </label>
+
+                                <label for="impermeabilizacao">
+                                    <input type="checkbox" id="impermeabilizacao"
+                                        name="impermeabilizacao">
+                                    Impermeabilização
+                                </label>
+
+                                <label for="texturas">
+                                    <input type="checkbox" id="texturas"
+                                        name="texturas">
+                                    Texturas e efeitos
+                                </label>
+
+                                <label for="repintura">
+                                    <input type="checkbox" id="repintura"
+                                        name="repintura">
+                                    Repintura e renovação
+                                </label>
+
+                            </fieldset>
+
+                            <label for="descricao">
+                                Descreva brevemente o serviço que precisa ser feito:
+                            </label>
+
+                            <textarea
+                                id="descricao"
+                                name="descricao"
+                                placeholder="Descreva o serviço que você precisa..."
+                                rows="6"
+                                required
+                            ></textarea>
+
+                            <label for="fotos">Adicione fotos do local:</label>
+
+                            <input type="file" id="fotos" name="fotos"
+                                accept="image/*" multiple>
+
+                        </section>
+
+                        <button type="submit">Enviar orçamento</button>
+
             </form>
 
         </section>
 
-        <section class="contate-nos">
-        <h2>Você também pode nos contatar:</h2>
-        <p>Siga-nos no Instagram e contate-nos via whatsapp ou telefone</p>
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/alfaeomegapinturass?utm_source=ig_web_button_share_sheet&mdxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="bi bi-instagram"></span></a>
-                </li>
-                <li>
-                    <a href="https://wa.me/55189968708?text=Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Alfa%20e%20%C3%94mega!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="bi bi-whatsapp"></span></a>
-                </li>
-                 <li>
-                    <a href="tel:+5518996870839" aria-label="Telefone"><span class="bi bi-telephone"></span></a>
-                </li>
-            </ul>
-        </nav>
+            <section class="contate-nos">
+            <h2>Você também pode nos contatar:</h2>
+            <p>Siga-nos no Instagram e contate-nos via whatsapp ou telefone</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/alfaeomegapinturass?utm_source=ig_web_button_share_sheet&mdxt=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="bi bi-instagram"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/55189968708?text=Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Alfa%20e%20%C3%94mega!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="bi bi-whatsapp"></span></a>
+                    </li>
+                    <li>
+                        <a href="tel:+5518996870839" aria-label="Telefone"><span class="bi bi-telephone"></span></a>
+                    </li>
+                </ul>
+            </nav>
 
-    </section>
+        </section>
 
 
     </main>
@@ -189,11 +243,11 @@
                         </li>
 
                         <li>
-                            <a href="https://wa.me/5555189968708?text=Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Alfa%20e%20%C3%94mega!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="bi bi-whatsapp"></span></a>
+                            <a href="https://wa.me/55189968708?text=Quero%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Alfa%20e%20%C3%94mega!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="bi bi-whatsapp"></span></a>
                         </li>
 
                         <li>
-                            <a href="tel:+5518996870839" aria-label="Telefone"><span class="bi bi-telephone"></span></a>
+                            <a href="tel:18996870839" aria-label="Telefone"><span class="bi bi-telephone"></span></a>
                         </li>
                     </ul>
                 </section>

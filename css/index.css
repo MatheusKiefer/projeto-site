@@ -94,7 +94,6 @@ p
     color: #008bd2;
     border-bottom: 3px solid #008bd2;
     padding: 0 10px 8px ;
-    
 }
 
 .menu a.ativo
@@ -278,6 +277,30 @@ footer a
         color: #fcfafa;
     }
 
+    .menu li a:hover{
+        background-color: #0077b6;
+        border: none;
+        color: white;
+        border-radius: 25px;
+
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        justify-content: flex-start;
+
+        width: 100%;
+        max-width: 90%;
+        min-width: 0;
+
+        font-size: 20px;
+
+        margin-top: 15px;
+        padding: 10px 20px 10px;
+        gap: 15px;
+    }
+
+    
+
     .menu li a.ativo
     {
         display: flex;
@@ -297,10 +320,6 @@ footer a
         color: white;
         
     }
-    .menu .botao-orcamento:hover
-    {
-        background-color: #0077b6;
-    }
 
     .menu .botao-orcamento
     {
@@ -319,11 +338,14 @@ footer a
         margin-top: 15px;
         padding: 10px 20px 10px;
         gap: 15px;
+
     }
 
     .menu .botao-orcamento:hover
     {
         background-color: #0077b6;
+        border: 2px solid #0077b6;
+        border-radius: 25px;
     }
 
     .menu .botao-orcamento span
@@ -331,14 +353,18 @@ footer a
         display: none;
     }
 
-    footer img
-    {
+    
+    footer{
+        flex-direction: row-reverse;
+    }
+    footer nav{
+        border-bottom: none;
+    }
+      
+    footer h3, ul, img, .redes_sociais{
         display: none;
     }
-    
-    footer .redes_sociais
-    {
-        padding: 0;
-        
+    footer p{
+        font-size: 10px;
     }
 }
