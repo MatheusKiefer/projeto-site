@@ -199,6 +199,10 @@ footer a
         display: grid;
         grid-template-columns: 1fr auto;
     }
+    .cabecalho img{
+        display: block;
+        
+    }
   
     .botao_mobile
     {
