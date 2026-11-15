@@ -1,7 +1,9 @@
+
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;                /* rolagem suave ao clicar em links (#contato) */
 }
 
+/* padding e borda ficam DENTRO da largura dos elementos */
 main *,
 main *::before,
 main *::after{
@@ -13,31 +15,27 @@ main{
     line-height: 1.6;
 }
 
-main img {
+main img{
     display: block;
     max-width: 100%;
 }
 
 main ul{
-    margin: 0;
-    padding: 0;
-    list-style:none;
-}
-
-main h1, main h2, main h3, main p, main figure{
-    margin: 0;
+    list-style: none;
 }
 
 main p{
-    text-align: left;
+    text-align: left;                       /* o css deixa os <p> justificados */
 }
 
+/* títulos: Montserrat se estiver carregada, senão uma das outras */
 main h1, main h2, main h3{
-    font-family: 'Montserrat' , 'Century Gothic' , 'Segoe UI' , Arial, sans-serif;
+    font-family: 'Montserrat', 'Century Gothic', 'Segoe UI', Arial, sans-serif;
     line-height: 1.2;
-    color:#091724;
+    color: #091724;
 }
 
+/* contorno azul para quem navega pelo teclado (Tab) */
 main a:focus-visible,
 main button:focus-visible,
 main summary:focus-visible{
@@ -45,6 +43,12 @@ main summary:focus-visible{
     outline-offset: 3px;
 }
 
+/* ==========================================================
+    BOTÕES (os dois "Solicitar Orçamento" e o "Fale com...")
+   O botão do cabeçalho NÃO é afetado: aqui só vale dentro do <main>.
+   ========================================================== */
+
+/* formato comum aos dois tipos */
 main .botao-orcamento,
 main .botao-secundario{
     display: inline-flex;
@@ -55,12 +59,13 @@ main .botao-secundario{
     max-width: none;
     padding: 12px 24px;
     border: 2px solid #0077b6;
-    border-radius: 999px;
+    border-radius: 999px;                   
     font-weight: 700;
     text-decoration: none;
-    transition: background-color 0.25s, color 0.25s, tranform 0.25s;
+    transition: background-color 0.25s, color 0.25s, transform 0.25s;
 }
 
+/* botão cheio (azul com letra branca; ":visited" evita a letra roxa) */
 main .botao-orcamento,
 main .botao-orcamento:visited{
     background: #0077b6;
@@ -71,9 +76,10 @@ main .botao-orcamento:hover,
 main .botao-orcamento:focus-visible{
     background-color: #005f91;
     border-color: #005f91;
-    transform: translateY(-2px);
+    transform: translateY(-2px);            
 }
 
+/* botão vazado (só contorno) */
 main .botao-secundario,
 main .botao-secundario:visited{
     background: transparent;
@@ -86,18 +92,29 @@ main .botao-secundario:hover{
     transform: translateY(-2px);
 }
 
-main > section, main > aside{
+/* ==========================================================
+    LARGURA DAS SEÇÕES
+   Todas as seções e o aviso usam a MESMA largura e a MESMA
+   margem: por isso textos e imagens ficam alinhados.
+   ========================================================== */
+main > section,
+main > aside{
     width: 90%;
-    max-width: 1100px;
-    margin-inline: auto;
-    padding-inline: 0;
+    max-width: 1100px;                      
+    margin-inline: auto;                    
 }
 
+
+/* ==========================================================
+    BANNER DO TOPO  (#apresentacao)
+   A foto fica ATRÁS do texto e a altura do banner acompanha a foto.
+   ========================================================== */
 #apresentacao{
     position: relative;
     isolation: isolate;
     display: grid;
     grid-template-columns: auto auto 1fr;
+    /* linhas de cima e de baixo flexíveis: mantêm o texto centralizado na vertical */
     grid-template-rows: minmax(48px, 1fr) auto auto auto auto minmax(48px, 1fr);
     grid-template-areas:
         ".         .         ."
@@ -108,13 +125,14 @@ main > section, main > aside{
         ".         .         .";
     column-gap: 12px;
     row-gap: 16px;
-    min-height: 360px;
+    min-height: 360px;                      /* altura mínima do banner */
     margin-bottom: 24px;
 }
 
+/* textos: cada um ocupa uma "área" da grade acima */
 #apresentacao h1{
     grid-area: titulo;
-    font-size: clamp(48px, 5vw, 72px);
+    font-size: clamp(48px, 5vw, 72px);      /* mínimo, ideal (vw), máximo */
 }
 
 #apresentacao h2{
@@ -126,8 +144,8 @@ main > section, main > aside{
 
 #apresentacao > p{
     grid-area: texto;
-    max-width: 52ch;
-    color: #3f4d58
+    max-width: 580px;                       /* largura máxima do parágrafo */
+    color: #3f4d58;
 }
 
 #apresentacao > .botao-orcamento{
@@ -136,42 +154,47 @@ main > section, main > aside{
 
 #apresentacao > .botao-secundario{
     grid-area: botao2;
-    background: #ffffff;
+    background: #ffffff;                    /* fundo branco para ler bem sobre a foto */
 }
 
 #apresentacao > .botao-secundario:hover{
     background: #0077b6;
 }
 
+/* foto: ocupa todas as linhas, colada na direita */
 #apresentacao figure{
     position: relative;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     justify-self: end;
     align-self: stretch;
-    z-index: -1;
+    z-index: -1;                            /* fica atrás do texto */
     display: flex;
-    width: 65%;
-    margin: 0;
+    width: 65%;                             /* largura da foto dentro do banner */
     overflow: hidden;
     border-radius: 0 16px 16px 0;
-    background-color: #dbeaf4
+    background-color: #dbeaf4;
 }
 
 #apresentacao figure img{
     width: 100%;
     object-fit: cover;
-    object-position: right center;
+    object-position: right center;          /* parte da foto que fica visível */
 }
 
+/* degradê branco sobre a foto (deixa o texto legível) */
 #apresentacao figure::after{
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right,#ffffff 0%,
-    rgba(255, 255, 255, 0.9)18%, rgba(255, 255, 255, 0)60%);
+    background: linear-gradient(to right, #ffffff 0%,
+        rgba(255, 255, 255, 0.9) 18%, rgba(255, 255, 255, 0) 60%);
 }
 
+
+/* ==========================================================
+    AVISO DE PRAZOS  (#aviso-prazos)
+   ========================================================== */
 #aviso-prazos{
     margin-bottom: 40px;
     padding: 20px 24px;
@@ -190,24 +213,34 @@ main > section, main > aside{
     color: #55646f;
 }
 
+
+/* ==========================================================
+    CARROSSEL DE SERVIÇOS  (#carrosel-servicos)
+   ========================================================== */
+
+/* ---------- Estrutura, título e setas ---------- */
+
+/* grade de 3 colunas: seta | carrossel | seta */
 #carrosel-servicos{
-    display:grid;
+    display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     column-gap: 12px;
     padding-block: 40px 56px;
 }
 
+/* o título ocupa as 3 colunas */
 #carrosel-servicos > header{
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     margin-bottom: 28px;
 }
 
+/* "NOSSOS SERVIÇOS" (letrinhas azuis acima do título) */
 #carrosel-servicos > header > p:first-child{
     margin-bottom: 6px;
     font-size: 17px;
     font-weight: 700;
-    letter-spacing: 0.15rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #0077b6;
 }
@@ -217,11 +250,14 @@ main > section, main > aside{
     font-size: clamp(30px, 3vw, 42px);
 }
 
-#carrosel-servicos > p:last-child{
+/* "Clique na imagem para ver..." */
+#carrosel-servicos > header > p:last-child{
     color: #55646f;
 }
 
-#carrosel-anterior, #carrosel-proximo{
+/* setas redondas */
+#carrosel-anterior,
+#carrosel-proximo{
     display: grid;
     place-items: center;
     width: 46px;
@@ -231,38 +267,42 @@ main > section, main > aside{
     border-radius: 50%;
     background: #091724;
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: 22px;
     cursor: pointer;
     transition: background-color 0.25s, transform 0.25s;
 }
 
+#carrosel-anterior:hover,
+#carrosel-proximo:hover{
+    background: #0077b6;
+    transform: scale(1.08);                 /* cresce um pouco */
+}
+
+/* trilho: os serviços ficam lado a lado e dá para rolar na horizontal */
 #carrosel{
-    display:flex;
+    display: flex;
     align-items: flex-start;
-    gap: 24px;
+    gap: 24px;                              /* espaço entre os serviços */
     padding: 12px 4px 28px;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;          /* cada serviço "encaixa" ao parar */
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: #0077b6 #eef5fa;
 }
 
+/* ---------- Serviço FECHADO (só a foto) ---------- */
 #carrosel > li{
-    flex: 0 0 300px;
+    flex: 0 0 300px;                        /* largura do serviço fechado */
     scroll-snap-align: start;
     border-radius: 16px;
     background: #ffffff;
     box-shadow: 0 8px 24px rgba(9, 23, 36, 0.12);
     overflow: hidden;
-    transition: flex-basis 0.4s ease, box-shadow 0.3s;
+    transition: flex-basis 0.4s ease, box-shadow 0.3s;   /* animação ao abrir */
 }
 
-#carrosel > li:has(details[open]){
-    flex-basis: 480px;
-    box-shadow: 0 14px 36px rgba(0, 119, 182, 0.3);
-}
-
+/* a foto é o "botão" que abre o serviço (esconde a setinha padrão do <details>) */
 #carrosel summary{
     display: block;
     list-style: none;
@@ -281,19 +321,16 @@ main > section, main > aside{
 
 #carrosel figure img{
     width: 100%;
-    height: 220px;
+    height: 220px;                          /* altura da foto no serviço fechado */
     object-fit: cover;
     transition: transform 0.5s ease, height 0.4s ease;
 }
 
 #carrosel summary:hover figure img{
-    transform: scale(1.06);
+    transform: scale(1.06);                 /* zoom ao passar o mouse */
 }
 
-#carrosel details[open] figure img{
-    height: 280px;
-}
-
+/* ícone "+" no canto da foto */
 #carrosel figure::after{
     content: "+";
     position: absolute;
@@ -311,12 +348,7 @@ main > section, main > aside{
     transition: transform 0.3s, background-color 0.3s;
 }
 
-#carrosel details[open] figure::after{
-    content: "-";
-    background: #091724;
-    transform: rotate(180deg);
-}
-
+/* nome do serviço sobre a foto */
 #carrosel figcaption{
     position: absolute;
     inset: auto 0 0 0;
@@ -328,8 +360,28 @@ main > section, main > aside{
     font-size: 22px;
 }
 
-#carrosel details > p, #carrosel details > h3,
-#carrosel details > ul, #carrosel details > .botao-orcamento{
+/* ---------- Serviço ABERTO (versão vertical - base, vale no celular) ---------- */
+#carrosel > li:has(details[open]){
+    flex-basis: 480px;                      /* serviço aberto fica mais largo */
+    box-shadow: 0 14px 36px rgba(0, 119, 182, 0.3);
+}
+
+#carrosel details[open] figure img{
+    height: 280px;
+}
+
+/* o "+" vira "-" */
+#carrosel details[open] figure::after{
+    content: "-";
+    background: #091724;
+    transform: rotate(180deg);
+}
+
+/* texto, lista e botão que aparecem ao abrir */
+#carrosel details > p,
+#carrosel details > h3,
+#carrosel details > ul,
+#carrosel details > .botao-orcamento{
     margin-inline: 20px;
 }
 
@@ -338,7 +390,7 @@ main > section, main > aside{
     color: #55646f;
 }
 
-#carrosel details > h3{
+#carrosel details > h3{                     /* "Como realizamos" */
     margin-top: 18px;
     margin-bottom: 8px;
     font-size: 20px;
@@ -350,7 +402,7 @@ main > section, main > aside{
     padding: 4px 0 4px 26px;
 }
 
-#carrosel details > ul li::before{
+#carrosel details > ul li::before{          /* o ✓ de cada item da lista */
     content: "✓";
     position: absolute;
     left: 0;
@@ -364,101 +416,101 @@ main > section, main > aside{
     margin-bottom: 22px;
 }
 
-@media(min-width:721px){
-    #carrosel > li:has(details[open]) {
-        flex-basis: min(760px,100%);
-    border: 1px solid #dbe7f0;
-    border-radius: 12px;
-    box-shadow: 0 10px 28px rgba(0, 119, 182, 0.14);
+/* ---------- Serviço ABERTO no computador (foto à esquerda, texto à direita) ---------- */
+@media(min-width: 721px){
+
+    #carrosel > li:has(details[open]){
+        flex-basis: min(760px, 100%);       /* largura do serviço aberto */
+        border: 1px solid #dbe7f0;
+        border-radius: 12px;
+        box-shadow: 0 10px 28px rgba(0, 119, 182, 0.14);
     }
-    
-#carrosel details[open]{
-    display: grid;
-    grid-template-columns: 290px minmax(0, 1fr);
-    grid-template-rows: auto auto auto 1fr;
-    min-height: 360px;
+
+    /* o <details> vira uma grade: coluna da foto (290px) + coluna do texto */
+    #carrosel details[open]{
+        display: grid;
+        grid-template-columns: 290px minmax(0, 1fr);
+        grid-template-rows: auto auto auto 1fr;
+        min-height: 360px;
+    }
+
+    /* a foto ocupa toda a altura da coluna da esquerda */
+    #carrosel details[open] > summary{
+        grid-column: 1;
+        grid-row: 1 / 5;
+        align-self: stretch;
+    }
+
+    #carrosel details[open] figure{
+        height: 100%;
+        min-height: 360px;
+        overflow: visible;                  /* deixa o título passar para a coluna da direita */
+    }
+
+    #carrosel details[open] figure img{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* o título sai de cima da foto e vai para a coluna da direita */
+    #carrosel details[open] figcaption{
+        position: absolute;
+        inset: auto;
+        top: 26px;
+        left: calc(100% + 28px);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: max-content;
+        max-width: 400px;
+        padding: 0;
+        background: none;
+        color: #091724;
+        font-size: 23px;
+    }
+
+    /* texto, lista e botão na coluna da direita */
+    #carrosel details[open] > p,
+    #carrosel details[open] > h3,
+    #carrosel details[open] > ul,
+    #carrosel details[open] > .botao-orcamento{
+        grid-column: 2;
+        margin-inline: 28px;
+    }
+
+    #carrosel details[open] > p{
+        margin-top: 74px;                   /* espaço para o título que está acima */
+        font-size: 19px;
+    }
+
+    #carrosel details[open] > h3{
+        margin-top: 16px;
+        font-size: 18px;
+    }
+
+    #carrosel details[open] > h3::after{
+        content: ":";                       /* "Como realizamos:" */
+    }
+
+    #carrosel details[open] > ul li{
+        font-size: 19px;
+    }
+
+    #carrosel details[open] > .botao-orcamento{
+        justify-self: start;
+        align-self: end;
+        margin-bottom: 26px;
+        padding: 10px 24px;
+    }
 }
 
-#carrosel details[open] > summary{
-    grid-column: 1;
-    grid-row: 1 / 5;
-    align-self: stretch;
-}
 
-#carrosel details[open] figure{
-    position: relative;
-    height: 100%;
-    min-height: 360px;
-    overflow: visible;
-}
-
-#carrosel details[open] figure img{
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#carrosel details[open] figcaption{
-    position: absolute;
-    inset: auto;
-    top: 26px;
-    left: calc(100% + 28px);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: max-content;
-    max-width: 400px;
-    padding: 0;
-    background: none;
-    color: #091724;
-    font-size: 23px;
-}
-
-#carrosel details[open] figcaption ::before{
-    content: "";
-    flex: none;
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-#carrosel details[open] > p, #carrosel details[open] > h3,
-#carrosel details[open] > ul, #carrosel details[open] > .botao-orcamento{
-    grid-column: 2;
-    margin-inline: 28px;
-}
-
-#carrosel details[open] > p{
-    margin-top: 74px;
-    font-size: 19px;
-}
-
-#carrosel details[open] > h3{
-    margin-top: 16px;
-    font-size: 18px;
-}
-
-#carrosel details[open] > h3::after{
-    content: ":";
-}
-
-#carrosel details[open] > ul li{
-    font-size: 19px;
-}
-
-#carrosel details[open] > .botao-orcamento{
-    justify-self: start;
-    align-self: end;
-    margin-top: 20px;
-    margin-bottom: 26px;
-    padding: 10px 24px;
-}
-}
-
+/* ==========================================================
+    DIFERENCIAIS  (#diferenciais)
+   ========================================================== */
 #diferenciais{
     padding-block: 48px;
     text-align: center;
@@ -469,6 +521,7 @@ main > section, main > aside{
     font-size: clamp(28px, 3vw, 40px);
 }
 
+/* itens lado a lado; quebram de linha sozinhos quando falta espaço */
 #diferenciais ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -483,6 +536,11 @@ main > section, main > aside{
     transition: transform 0.25s, box-shadow 0.25s;
 }
 
+#diferenciais li:hover{
+    transform: translateY(-4px);            /* sobe ao passar o mouse */
+    box-shadow: 0 8px 24px rgba(9, 23, 36, 0.12);
+}
+
 #diferenciais h3{
     margin-bottom: 6px;
     font-size: 21px;
@@ -492,6 +550,11 @@ main > section, main > aside{
     color: #55646f;
 }
 
+
+/* ==========================================================
+    CHAMADA FINAL  (#chamada-final)
+   Computador: texto à esquerda, botão à direita.
+   ========================================================== */
 #chamada-final{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -505,7 +568,7 @@ main > section, main > aside{
     margin-block: 24px 64px;
     padding: 40px 48px;
     border-radius: 16px;
-    background: linear-gradient(135deg, #091724, #25465B);
+    background: linear-gradient(135deg, #091724, #25465b);
     color: #ffffff;
 }
 
@@ -526,6 +589,7 @@ main > section, main > aside{
     justify-self: end;
 }
 
+/* "Estamos prontos para ajudar!" */
 #chamada-final h3{
     grid-area: frase;
     margin-top: 4px;
@@ -535,11 +599,19 @@ main > section, main > aside{
     color: #6ec1f0;
 }
 
-@media(max-width:900px){
+
+/* ==========================================================
+    RESPONSIVO
+   ========================================================== */
+
+/* ---------- Tablet e abaixo (até 900px) ---------- */
+@media(max-width: 900px){
+
+    /* banner: tudo em uma coluna e a foto vira fundo clarinho */
     #apresentacao{
         grid-template-columns: 1fr;
         grid-template-rows: minmax(32px, 1fr) auto auto auto auto minmax(32px, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "."
             "titulo"
             "subtitulo"
@@ -550,23 +622,24 @@ main > section, main > aside{
         min-height: 0;
     }
 
-#apresentacao figure{
-    width: 100%;
-    border-radius: 16px;
-}
+    #apresentacao figure{
+        width: 100%;
+        border-radius: 16px;
+    }
 
-#apresentacao figure::after{
-    background: linear-gradient(to bottom,rgba(255, 255, 255, 0.92),
-    rgba(255, 255, 255, 0.7));
-}
+    #apresentacao figure::after{
+        background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.7));
+    }
 
-#apresentacao > .botao-orcamento,
-#apresentacao > .botao-secundario{
-    justify-self: start;
-}
+    #apresentacao > .botao-orcamento,
+    #apresentacao > .botao-secundario{
+        justify-self: start;
+    }
 
-#chamada-final{
-    grid-template-columns: 1fr;
+    /* chamada final: tudo empilhado e centralizado */
+    #chamada-final{
+        grid-template-columns: 1fr;
         grid-template-areas:
             "titulo"
             "texto"
@@ -574,12 +647,12 @@ main > section, main > aside{
             "botao";
         padding: 32px 24px;
         text-align: center;
-}
+    }
 
-#chamada-final p{
-    max-width: none;
-    text-align: center;
-}
+    #chamada-final p{
+        max-width: none;
+        text-align: center;
+    }
 
     #chamada-final .botao-orcamento{
         justify-self: center;
@@ -587,33 +660,40 @@ main > section, main > aside{
     }
 }
 
+/* ---------- Celular (até 720px) ---------- */
 @media(max-width: 720px){
+
+    /* sem setas: o carrossel se navega deslizando o dedo */
     #carrosel-servicos{
         grid-template-columns: minmax(0, 1fr);
     }
 
-    #carrosel-anterior, #carrosel-proximo{
+    #carrosel-anterior,
+    #carrosel-proximo{
         display: none;
     }
 
-    #carrosel > li, #carrosel > li:has(details[open]){
+    /* serviço fechado ou aberto ocupa 85% da largura */
+    #carrosel > li,
+    #carrosel > li:has(details[open]){
         flex-basis: 85%;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* ==========================================================
+    MENOS MOVIMENTO
+   Quem ativou "reduzir movimento" no sistema não vê animações.
+   ========================================================== */
+@media (prefers-reduced-motion: reduce){
     html,
-    #carrosel {
+    #carrosel{
         scroll-behavior: auto;
     }
- 
+
     *,
     *::before,
-    *::after {
+    *::after{
         animation: none !important;
         transition: none !important;
     }
-
 }
-
-
