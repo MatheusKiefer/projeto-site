@@ -4,76 +4,33 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body
+{
     font-size: 20px;
 }
-p{
+
+p
+{
     text-align: justify;
 }
-footer {
-    margin: 0;
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-
-    gap: 20px;
-    padding: 2%;
-    background-color: #091724;
-    color: white;
-    
-}
-footer nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 25px;
-    margin: 0 ;
-    padding-bottom: 10px;
-    flex-wrap: nowrap;
-    flex-grow: 1;
-    border-bottom: 2px solid #005f91;
-
-}
-footer h3{
-    font-weight: 600;
-}
-footer img{
-    width: 250px;
-    height: auto;
-    object-fit: contain;
-}
-footer ul{
-    margin: 0;
-    padding: 2px;
-    list-style: none;
-}
-
-footer .redes_sociais{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 10%;
-}
-
-footer a{
-    text-decoration: none;
-    color: white;
-}
-
-.cabecalho{
-    margin: 0;
+    .cabecalho{
+    margin: 5px;
     display: flex;
     flex-flow: row;
     justify-content:space-between;
     align-items: center;
     gap: 20px;
     padding: 5px;
+    width: 100%;
     background-color: white;
     
 }
 
-.botao_mobile{
+.botao_mobile
+{
     display: none;
     background: none;
     border: none;
@@ -83,15 +40,15 @@ footer a{
     padding: 5px 10px;
 }
 
-
-.imagem-logo{
+.imagem-logo
+{
     width: 100%;
     max-width: 200px;
     min-width: 100px;
 }
 
-
-.menu{
+.menu
+{
     margin: 0;
     display: flex;
     align-items: center;
@@ -102,7 +59,9 @@ footer a{
     flex: 1;
     
 }
-.menu ul{
+
+.menu ul
+{
     display: flex;
     align-items: baseline;
     justify-content:center;
@@ -113,12 +72,14 @@ footer a{
     flex-wrap: nowrap;
 }
 
-.menu li{
+.menu li
+{
     
     white-space: nowrap; 
 }
 
-.menu li a{
+.menu li a
+{
     color: inherit; 
     text-decoration: none;
     color: #333;
@@ -128,18 +89,20 @@ footer a{
 
 
 .menu li a:hover, 
-.menu li a.ativo{
+.menu li a.ativo
+{
     color: #008bd2;
     border-bottom: 3px solid #008bd2;
     padding: 0 10px 8px ;
-    
 }
 
-.menu a.ativo{
+.menu a.ativo
+{
     border-bottom: 3px solid #008bd2;
 }
 
-.menu .botao-orcamento{
+.menu .botao-orcamento
+{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,31 +119,100 @@ footer a{
 
 }
 
-.botao-orcamento:hover{
+.botao-orcamento:hover
+{
     background-color: #005f91;
 }
 
-.botao-orcamento span{
+.botao-orcamento span
+{
     font-size: 30px;
 }
+
+
+footer
+{
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+
+    gap: 20px;
+    padding: 2%;
+    background-color: #091724;
+    color: white;
+    
+}
+footer nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 0 ;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    border-bottom: 2px solid #005f91;
+
+}
+footer h3
+{
+    font-weight: 600;
+}
+footer img
+{
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+footer ul
+{
+    margin: 0;
+    padding: 2px;
+    list-style: none;
+}
+
+footer .redes_sociais
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10%;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: white;
+}
+
 
 
 
 @media (max-width: 730px)
 {
-    .cabecalho{
+    .cabecalho
+    {
         display: grid;
         grid-template-columns: 1fr auto;
-        background-color: #005f9120;
+    }
+    .cabecalho img{
+        display: block;
+        
     }
   
-    .botao_mobile{
+    .botao_mobile
+    {
         display: block;
         position: relative;
         z-index: 11000;
     }
     
-    .menu{
+    .menu
+    {
         position: fixed;
         top: 0;
         right:-100%;
@@ -205,20 +237,22 @@ footer a{
         transition: right 0.3s ease-in-out;
     }
    
-
-    .menu.aberto{
+    .menu.aberto
+    {
         right:0;
     }
 
     
-    .cabecalho:has(.menu.aberto) .botao_mobile {
+    .cabecalho:has(.menu.aberto) .botao_mobile
+    {
         color: #fcfafa;
         font-family: 'Courier New', Courier, monospace;
         font-size: 20px;
     }
 
 
-    .menu ul{
+    .menu ul
+    {
         display: flex;
         flex-direction: column;
         gap:15px;
@@ -228,14 +262,16 @@ footer a{
     }
 
 
-    .menu li{   
+    .menu li
+    {   
         width: 100%;
         color: #fcfafa;
         list-style: none;
         text-align: left;
     }
     
-    .menu li a{
+    .menu li a
+    {
         display: block;
         width: 100%;
         max-width: 100%;
@@ -245,7 +281,32 @@ footer a{
         color: #fcfafa;
     }
 
-    .menu li a.ativo{
+    .menu li a:hover{
+        background-color: #0077b6;
+        border: none;
+        color: white;
+        border-radius: 25px;
+
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        justify-content: flex-start;
+
+        width: 100%;
+        max-width: 90%;
+        min-width: 0;
+
+        font-size: 20px;
+
+        margin-top: 15px;
+        padding: 10px 20px 10px;
+        gap: 15px;
+    }
+
+    
+
+    .menu li a.ativo
+    {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -263,11 +324,9 @@ footer a{
         color: white;
         
     }
-    .menu .botao-orcamento:hover{
-        background-color: #0077b6;
-    }
 
-    .menu .botao-orcamento{
+    .menu .botao-orcamento
+    {
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -283,23 +342,33 @@ footer a{
         margin-top: 15px;
         padding: 10px 20px 10px;
         gap: 15px;
+
     }
 
-    .menu .botao-orcamento:hover{
+    .menu .botao-orcamento:hover
+    {
         background-color: #0077b6;
+        border: 2px solid #0077b6;
+        border-radius: 25px;
     }
 
-    .menu .botao-orcamento span{
+    .menu .botao-orcamento span
+    {
         display: none;
     }
 
-    footer img{
+    
+    footer{
+        flex-direction: row-reverse;
+    }
+    footer nav{
+        border-bottom: none;
+    }
+      
+    footer h3, ul, img, .redes_sociais{
         display: none;
     }
-    
-    footer .redes_sociais{
-        padding: 0;
-        
+    footer p{
+        font-size: 10px;
     }
-    
 }
