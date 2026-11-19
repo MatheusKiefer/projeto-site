@@ -718,66 +718,6 @@
 .pagina-inicio .cabecalho {
     width: auto;
 }
-@media (max-width: 850px) {
-    .pagina-inicio .cabecalho {
-        display: grid;
-        grid-template-columns: 1fr auto;
-    }
-    .pagina-inicio .botao_mobile {
-        display: block;
-        position: relative;
-        z-index: 11000;
-    }
-    .pagina-inicio .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: min(80vw, 330px);
-        height: 100dvh;
-        padding: 100px 15px 20px;
-        z-index: 1000;
-        background: #005f91;
-        border-radius: 10px;
-        transition: right .3s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .pagina-inicio .menu.aberto {
-        right: 0;
-    }
-    .pagina-inicio .menu ul {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        margin: 0;
-    }
-    .pagina-inicio .menu li {
-        width: 100%;
-        color: white;
-    }
-    .pagina-inicio .menu li a {
-        display: block;
-        color: white;
-        font-size: 18px;
-        padding: 12px;
-    }
-    .pagina-inicio .menu .botao-orcamento {
-        display: flex;
-        width: 100%;
-        max-width: 100%;
-        margin-top: 15px;
-        padding: 10px 15px;
-        background: transparent;
-        font-size: 17px;
-    }
-    .pagina-inicio .menu .botao-orcamento span {
-        display: none;
-    }
-    .pagina-inicio .cabecalho .imagem-logo {
-        display: block;
-    }
-}
 
 @media (max-width: 380px) {
     .banner-principal {

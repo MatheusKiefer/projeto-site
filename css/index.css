@@ -189,7 +189,7 @@ footer a
     color: white;
 }
 
-
+/*Configuração mobile*/
 
 
 @media (max-width: 730px)
@@ -315,7 +315,9 @@ footer a
         min-width: 0;
         font-size: 18px;
         background-color: #013551;
+        border-color: none;
         border-radius: 25px;
+        border-bottom: none;
         
 
         margin-top: 15px;
@@ -337,7 +339,7 @@ footer a
         min-width: 0;
 
         font-size: 20px;
-        background-color: transparent;
+        background: transparent;
 
         margin-top: 15px;
         padding: 10px 20px 10px;
@@ -348,8 +350,6 @@ footer a
     .menu .botao-orcamento:hover
     {
         background-color: #0077b6;
-        border: 2px solid #0077b6;
-        border-radius: 25px;
     }
 
     .menu .botao-orcamento span

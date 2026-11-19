@@ -1,99 +1,182 @@
 
-// Imagens do carrossel: acrescente novos caminhos aqui.
-var imagens = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg", "img/img5.jpg", "img/img6.jpg", "img/img7.jpg"];
+/* Carrossel da página inicial */
 
-// O carrossel da Home não usa os controles da página Quem Somos.
-// Evita que o evento de resize do JS compartilhado tente acessá-los.
-if (typeof inicial === "function") {window.removeEventListener("resize", inicial);}
-const carrossel = document.getElementById("carrossel-projetos");
-if (carrossel && imagens.length) {
-    const anterior = document.getElementById("projeto-anterior");
-    const proximo = document.getElementById("projeto-proximo");
-    const copias = Math.min(3, imagens.length);
-    const lista = [
-        ...imagens.slice(-copias),
-        ...imagens,
-        ...imagens.slice(0, copias)
-    ];
-    carrossel.innerHTML = `
-        <section class="carrossel-faixa">
-            ${lista.map((imagem, i) => `
-                <figure class="projeto-card"
-                    ${i < copias || i >= imagens.length + copias
-                        ? 'aria-hidden="true"' : ''}>
-                    <img
-                        src="${imagem}"
-                        alt="${i < copias || i >= imagens.length + copias
-                            ? ''
-                            : `Projeto realizado ${i - copias + 1}`}"
-                        draggable="false">
-                </figure>
-            `).join("")}
-        </section>
-    `;
-    const faixa = carrossel.querySelector(".carrossel-faixa");
-    let indice = copias;
-    let emMovimento = false;
-    let fila = 0;
-    let inicioToque = 0;
-    const passo = () =>
-        faixa.querySelector(".projeto-card").getBoundingClientRect().width +
-        (parseFloat(getComputedStyle(faixa).gap) || 0);
-    function posicionar(semAnimacao = false) {
-        if (semAnimacao) {
-            faixa.style.transition = "none";
+var imagens = [
+    "img/img1.jpg",
+    "img/img2.jpg",
+    "img/img3.jpg",
+    "img/img4.jpg",
+    "img/img5.jpg",
+    "img/img6.jpg",
+    "img/img7.jpg"
+];
+
+var carrossel = document.getElementById("carrossel-projetos");
+var btnAnterior = document.getElementById("projeto-anterior");
+var btnProximo = document.getElementById("projeto-proximo");
+
+var faixa;
+var indice = 3;
+var inicioToque = 0;
+var emMovimento = false;
+
+
+function iniciar_carrossel() {
+
+    if (carrossel && btnAnterior && btnProximo) {
+
+        carrossel.innerHTML = "";
+
+        faixa = document.createElement("section");
+        faixa.classList.add("carrossel-faixa");
+
+        // Cópias das últimas imagens
+        for (var i = imagens.length - 3; i < imagens.length; i++) {
+            criar_imagem(i);
         }
-        faixa.style.transform =
-            `translate3d(${-indice * passo()}px, 0, 0)`;
-        if (semAnimacao) {
-            faixa.offsetWidth;
-            faixa.style.transition = "";
+
+        // Imagens originais
+        for (var i = 0; i < imagens.length; i++) {
+            criar_imagem(i);
         }
+
+        // Cópias das primeiras imagens
+        for (var i = 0; i < 3; i++) {
+            criar_imagem(i);
+        }
+
+        carrossel.appendChild(faixa);
+
+        btnAnterior.onclick = voltar_imagem;
+        btnProximo.onclick = avancar_imagem;
+
+        faixa.addEventListener("transitionend", finalizar_movimento);
+
+        faixa.addEventListener("touchstart", tocar_inicio);
+        faixa.addEventListener("touchend", tocar_fim);
+
+        window.addEventListener("resize", ajustar_posicao);
+
+        ajustar_posicao();
     }
-    function finalizarMovimento() {
-        if (indice >= imagens.length + copias) {
-            indice -= imagens.length;
-        }
-        if (indice < copias) {
-            indice += imagens.length;
-        }
-        posicionar(true);
-        emMovimento = false;
-        if (fila) {
-            const proxima = Math.sign(fila);
-            fila -= proxima;
-            requestAnimationFrame(() => mover(proxima));
-        }
-    }
-    function mover(direcao) {
-        if (emMovimento) {
-            fila += direcao;
-            return;
-        }
-        emMovimento = true;
-        indice += direcao;
-        if (window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches) {
-            finalizarMovimento();
-        } else {
-            posicionar();
-            setTimeout(finalizarMovimento, 370);
-        }
-    }
-    anterior?.addEventListener("click", () => mover(-1));
-    proximo?.addEventListener("click", () => mover(1));
-    faixa.addEventListener("touchstart", e =>
-        inicioToque = e.changedTouches[0].clientX,
-        { passive: true }
-    );
-    faixa.addEventListener("touchend", e => {
-        const distancia =
-            e.changedTouches[0].clientX - inicioToque;
-        if (Math.abs(distancia) > 40) {
-            mover(distancia > 0 ? -1 : 1);
-        }
-    }, { passive: true });
-    window.addEventListener("resize", () => posicionar(true));
-    posicionar(true);
 }
+
+
+/* Cria cada imagem */
+
+function criar_imagem(posicao) {
+
+    var figura = document.createElement("figure");
+    figura.classList.add("projeto-card");
+
+    var imagem = document.createElement("img");
+    imagem.src = imagens[posicao];
+    imagem.alt = "Projeto realizado " + (posicao + 1);
+    imagem.draggable = false;
+
+    figura.appendChild(imagem);
+    faixa.appendChild(figura);
+}
+
+
+/* Calcula o tamanho de cada movimento */
+
+function tamanho_passo() {
+
+    var card = faixa.querySelector(".projeto-card");
+
+    return card.getBoundingClientRect().width + 20;
+}
+
+
+/* Movimenta as imagens */
+
+function mostrar_imagem() {
+
+    faixa.style.transform =
+        "translateX(" + (-indice * tamanho_passo()) + "px)";
+}
+
+
+/* Avançar */
+
+function avancar_imagem() {
+
+    if (emMovimento == false) {
+        emMovimento = true;
+
+        indice++;
+
+        mostrar_imagem();
+    }
+}
+
+
+/* Voltar */
+
+function voltar_imagem() {
+
+    if (emMovimento == false) {
+        emMovimento = true;
+
+        indice--;
+
+        mostrar_imagem();
+    }
+}
+
+
+/* Mantém o carrossel em ciclo */
+
+function finalizar_movimento() {
+
+    if (indice >= imagens.length + 3) {
+        indice = 3;
+        ajustar_posicao();
+    }
+    else if (indice < 3) {
+        indice = imagens.length + 2;
+        ajustar_posicao();
+    }
+
+    emMovimento = false;
+}
+
+
+/* Ajusta a posição sem animação */
+
+function ajustar_posicao() {
+
+    faixa.style.transition = "none";
+
+    mostrar_imagem();
+
+    // Garante que o navegador aplique a posição
+    faixa.offsetWidth;
+
+    faixa.style.transition = "";
+}
+
+
+/* Arrastar no celular */
+
+function tocar_inicio(evento) {
+    inicioToque = evento.changedTouches[0].clientX;
+}
+
+function tocar_fim(evento) {
+
+    var distancia = evento.changedTouches[0].clientX - inicioToque;
+
+    if (distancia > 40) {
+        voltar_imagem();
+    }
+    else if (distancia < -40) {
+        avancar_imagem();
+    }
+}
+
+
+/* Inicializa */
+
+iniciar_carrossel();

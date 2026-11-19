@@ -155,11 +155,11 @@ main .botao-orcamento:focus-visible{
     display: flex;
     align-items: stretch;
 
-    max-height: 800px;
+    max-height: none;
     margin: auto;
     padding: 1%;
     border-radius: 10px;
-    overflow: scroll;
+    overflow:hidden;
 } 
 
 .nossa_historia article{

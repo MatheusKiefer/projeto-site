@@ -13,7 +13,7 @@
         let paginaAtual =window.location.pathname
         
     
-        if(paginaAtual.includes("inicio.html") || paginaAtual==="/")
+        if(paginaAtual.includes("index.html") || paginaAtual==="/")
             {
                 document.getElementById("menu_1").classList.add("ativo")
             }
@@ -85,7 +85,7 @@
 
     )
 
-    /*Função Carrossel na página quem somos*/
+    /*Função Carrossel na página quem somos (somente para mobile)*/
     window.addEventListener("resize", inicial)
 
     function inicial(){
